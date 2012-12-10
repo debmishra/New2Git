@@ -1,0 +1,2179 @@
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PA_PM_CONT_NEGO = new CalcBase("PA_PM_CONT_NEGO"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase  PA_SRCRA_CONT_NEGO = new CalcBase("PA_SRCRA_CONT_NEGO"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 5.5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PA_PM_GRANT_ADMIN = new CalcBase("PA_PM_GRANT_ADMIN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PA_ADMIN_GRANT_ADMIN = new CalcBase("PA_ADMIN_GRANT_ADMIN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MM_MMON_VP = new CalcBase("MM_MMON_VP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MM_VP_REV_LAB = new CalcBase("MM_VP_REV_LAB"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .25;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MM_VP_REV_OTHER_TEST = new CalcBase("MM_VP_REV_OTHER_TEST"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .25;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MM_VP_INTERP_TEST = new CalcBase("MM_VP_INTERP_TEST"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .3;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MM_VP_PREP_SAE = new CalcBase("MM_VP_PREP_SAE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 3.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MM_ADM_PREP_SAE = new CalcBase("MM_ADM_PREP_SAE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_STATUS_REP = new CalcBase("PM_PM_STATUS_REP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_STATUS_REP = new CalcBase("PM_SRCRA_STATUS_REP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_ENROLL_TRACK = new CalcBase("PM_ENROLL_TRACK"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .166;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_CRA_ENROLL_TRACK = new CalcBase("PM_CRA_ENROLL_TRACK"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .33;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_SUMMARY_REP = new CalcBase("PM_PM_SUMMARY_REP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 3.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_ADM_SUMMARY_REP = new CalcBase("PM_ADM_SUMMARY_REP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_TELCON_LOGGING = new CalcBase("PM_PM_TELCON_LOGGING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .166;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_ADM_TELCON_LOGGING = new CalcBase("PM_ADM_TELCON_LOGGING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .33;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 12 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_CENTRAL_LAB = new CalcBase("PM_PM_CENTRAL_LAB"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 13 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_CENTLAB_ONGOING = new CalcBase("PM_PM_CENTLAB_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 13 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_CENTLAB_ONGOING = new CalcBase("PM_SRCRA_CENTLAB_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 14 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_CENTRAL_IRB = new CalcBase("PM_PM_CENTRAL_IRB"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 15 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_CENTIRB_ONGOING = new CalcBase("PM_PM_CENTIRB_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 15 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_CENTIRB_ONGOING = new CalcBase("PM_SRCRA_CENTIRB_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 16 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_PRINTSERV = new CalcBase("PM_PM_PRINTSERV"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 17 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_PRINTSERV_ONGOING = new CalcBase("PM_PM_PRINTSERV_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 17 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_PRINTSERV_ONGOING = new CalcBase("PM_SRCRA_PRINTSERV_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 18 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_DRUGSUPP_MGT = new CalcBase("PM_PM_DRUGSUPP_MGT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 19 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_DRUGSUPP_ONGOING = new CalcBase("PM_PM_DRUGSUPP_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 19 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_DRUGSUPP_ONGOING = new CalcBase("PM_SRCRA_DRUGSUPP_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 20 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_OTHER_VENDORS = new CalcBase("PM_PM_OTHER_VENDORS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 21 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_OTHVENDOR_ONGOING = new CalcBase("PM_PM_OTHVENDOR_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 3.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 21 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_OTHVENDOR_ONGOING = new CalcBase("PM_SRCRA_OTHVENDOR_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 3.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 22 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_NEWSLETTER = new CalcBase("PM_PM_NEWSLETTER"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 22 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_NEWSLETTER = new CalcBase("PM_SRCRA_NEWSLETTER"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 6.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 22 roleID 23
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_ADMIN_NEWSLETTER = new CalcBase("PM_ADMIN_NEWSLETTER"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 23 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_NEWSLETTER_ONGOING = new CalcBase("PM_PM_NEWSLETTER_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 23 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_NEWSLETTER_ONGOING = new CalcBase("PM_SRCRA_NEWSLETTER_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 6.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 23 roleID 23
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_ADMIN_NEWSLETTER_ONGOING = new CalcBase("PM_ADMIN_NEWSLETTER_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 24 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_MEETSUBCON = new CalcBase("PM_PM_MEETSUBCON"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 24 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_MEETSUBCON = new CalcBase("PM_SRCRA_MEETSUBCON"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 24 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_CRA_SUBCON = new CalcBase("PM_CRA_SUBCON"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 25 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_INTERNAL_MEETINGS = new CalcBase("PM_PM_INTERNAL_MEETINGS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 25 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_INTERNAL_MEETINGS = new CalcBase("PM_SRCRA_INTERNAL_MEETINGS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 25 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_CRA_INTERNAL_MEETINGS = new CalcBase("PM_CRA_INTERNAL_MEETINGS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 26 roleID 18
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_PM_TELECONF_INV = new CalcBase("PM_PM_TELECONF_INV"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 26 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_SRCRA_TELECONF_INV = new CalcBase("PM_SRCRA_TELECONF_INV"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 26 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase PM_CRA_TELECONF_INV = new CalcBase("PM_CRA_TELECONF_INV"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 3.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 27 roleID 4
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_VP_PROTOCOL_PREP = new CalcBase("CO_VP_PROTOCOL_PREP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 30.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 27 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_PROTOCOL_PREP = new CalcBase("CO_PM_PROTOCOL_PREP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 30.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 28 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_INV_RECRUIT = new CalcBase("CO_PM_INV_RECRUIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 5.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 28 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_SRCRA_INV_RECRUIT = new CalcBase("CO_SRCRA_INV_RECRUIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 28 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_INV_RECRUIT = new CalcBase("CO_CRA_INV_RECRUIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 5.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 29 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_OTH_PRESTUDY_DOC = new CalcBase("CO_PM_OTH_PRESTUDY_DOC"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 29 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_OTH_PRESTUDY_DOC = new CalcBase("CO_CRA_OTH_PRESTUDY_DOC"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 5.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 30 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_WRITE_ICF = new CalcBase("CO_PM_WRITE_ICF"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 30 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_SRCRA_WRITE_CRF = new CalcBase("CO_SRCRA_WRITE_CRF"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 30 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_WRITE_CRF = new CalcBase("CO_CRA_WRITE_CRF"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 6.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 31 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_SITE_EVAL = new CalcBase("CO_PM_SITE_EVAL"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 31 roleID 43
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_ADMIN_SITE_EVAL = new CalcBase("CO_ADMIN_SITE_EVAL"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 32 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_SRCRA_CRF_PREP = new CalcBase("CO_SRCRA_CRF_PREP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 3.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 33 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_SRCRA_REGDOC_PREP = new CalcBase("CO_SRCRA_REGDOC_PREP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .75;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 33 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_REGDOC_PREP = new CalcBase("CO_CRA_REGDOC_PREP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .75;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 34 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_INVESTIGATOR_MEET = new CalcBase("CO_PM_INVESTIGATOR_MEET"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 34 roleID 19
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_SRCRA_INVESTIGATOR_MEET = new CalcBase("CO_SRCRA_INVESTIGATOR_MEET"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 34 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_INVESTIGATOR_MEET = new CalcBase("CO_CRA_INVESTIGATOR_MEET"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 35 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_SITEMON_INIT = new CalcBase("CO_PM_SITEMON_INIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 35 roleID 43
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_ADMIN_SITEMON_INIT = new CalcBase("CO_ADMIN_SITEMON_INIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 36 roleID 43
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_ADMIN_MAINT_WORKFILES = new CalcBase("CO_ADMIN_MAINT_WORKFILES"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .75;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 37 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_SITEMON_ROUTINE = new CalcBase("CO_PM_SITEMON_ROUTINE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 37 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_SITEMON_ROUTINE = new CalcBase("CO_CRA_SITEMON_ROUTINE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 37 roleID 43
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_ADMIN_SITEMON_ROUTINE = new CalcBase("CO_ADMIN_SITEMON_ROUTINE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 38 roleID 12
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_PM_SITEMON_CLOSE = new CalcBase("CO_PM_SITEMON_CLOSE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 38 roleID 20
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_CRA_SITEMON_CLOSE = new CalcBase("CO_CRA_SITEMON_CLOSE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 38 roleID 43
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase CO_ADMIN_SITEMON_CLOSE = new CalcBase("CO_ADMIN_SITEMON_CLOSE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 39 roleID 13
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_PM_MANAGEMENT_PLAN = new CalcBase("DM_PM_MANAGEMENT_PLAN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 39 roleID 29
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_SDC_MANAGEMENT_PLAN = new CalcBase("DM_SDC_MANAGEMENT_PLAN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 40 roleID 29
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_SDC_DB_DESIGN = new CalcBase("DM_SDC_DB_DESIGN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 40 roleID 42
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_DBA_DB_DESIGN = new CalcBase("DM_DBA_DB_DESIGN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 41 roleID 13
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_PM_CRF_GENERAL = new CalcBase("DM_PM_CRF_GENERAL"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 42 roleID 13
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_PM_DMADMINISTRATION = new CalcBase("DM_PM_DMADMINISTRATION"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 40.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 43 roleID 24
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_ADMIN_CRF_TRACKING = new CalcBase("DM_ADMIN_CRF_TRACKING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .025;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 44 roleID 48
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_DATAENTRY_DATA_ENTRY = new CalcBase("DM_DATAENTRY_DATA_ENTRY"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .125;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 45 roleID 29
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_SRCOORD_CODING = new CalcBase("DM_SRCOORD_CODING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 46 roleID 30
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_DATACOORD_QUERYMGT = new CalcBase("DM_DATACOORD_QUERYMGT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .01;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 47 roleID 30
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_DATACOORD_DATACLEANUP = new CalcBase("DM_DATACOORD_DATACLEANUP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .166667;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 48 roleID 30
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_DATACOORD_QC = new CalcBase("DM_DATACOORD_QC"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .0033;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 49 roleID 13
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_PM_DATABASE_CLOSE = new CalcBase("DM_PM_DATABASE_CLOSE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 30.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 49 roleID 42
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase DM_DBA_DATABASE_CLOSE = new CalcBase("DM_DBA_DATABASE_CLOSE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 30.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 50 roleID 6
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_VP_PLAN = new CalcBase("STAT_VP_PLAN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 50 roleID 14
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_PM_PLAN = new CalcBase("STAT_PM_PLAN"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 12.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 51 roleID 32
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_SRSTAT_CREATE_SHELLS = new CalcBase("STAT_SRSTAT_CREATE_SHELLS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 51 roleID 33
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_STAT_CREATE_SHELLS = new CalcBase("STAT_STAT_CREATE_SHELLS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 52 roleID 33
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_STAT_ANALYSIS = new CalcBase("STAT_STAT_ANALYSIS"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 8.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 53 roleID 14
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_PM_REPORT = new CalcBase("STAT_PM_REPORT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 53 roleID 32
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_SRSTAT_REPORT = new CalcBase("STAT_SRSTAT_REPORT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 2.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 53 roleID 33
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase STAT_STAT_REPORT = new CalcBase("STAT_STAT_REPORT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 21.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 54 roleID 34
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MW_SRWRITER_PREPBROCHURE = new CalcBase("MW_SRWRITER_PREPBROCHURE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 60.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 55 roleID 35
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MW_WRITER_CLINREPORT = new CalcBase("MW_WRITER_CLINREPORT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 80.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 56 roleID 34
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MW_SRWRITER_REVIEW_RPT = new CalcBase("MW_SRWRITER_REVIEW_RPT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 8.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 56 roleID 35
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MW_WRITER_REVIEW_RPT = new CalcBase("MW_WRITER_REVIEW_RPT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 8.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 57 roleID 35
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase MW_WRITER_MANUSCRIPT = new CalcBase("MW_WRITER_MANUSCRIPT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 25.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 58 roleID 26
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase RA_ADMIN_MAINT_FILES = new CalcBase("RA_ADMIN_MAINT_FILES"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.5;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 59 roleID 26
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase RA_ADMIN_MAINTFILE_ONGOING = new CalcBase("RA_ADMIN_MAINTFILE_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 60 roleID 16
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase RA_PM_SITEAUDIT = new CalcBase("RA_PM_SITEAUDIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 0.2;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 60 roleID 36
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase RA_AUDITOR_SITEAUDIT = new CalcBase("RA_AUDITOR_SITEAUDIT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 4.6;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 61 roleID 16
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase RA_PM_DATAQA_SUPERVISION = new CalcBase("RA_PM_DATAQA_SUPERVISION"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 62 roleID 37
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase RA_QCTECH_DATAQA = new CalcBase("RA_QCTECH_DATAQA"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .0015;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 63 roleID 17
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase SAF_PM_FDA_ANNUALREP = new CalcBase("SAF_PM_FDA_ANNUALREP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 10.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 64 roleID 42
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_DBA_IVR = new CalcBase("IT_DBA_IVR"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 100.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 64 roleID 40
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_SRPROG_IVR = new CalcBase("IT_SRPROG_IVR"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 100.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 64 roleID 41
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_PROG_IVR = new CalcBase("IT_PROG_IVR"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 400.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 65 roleID 41
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_PROG_IVRMAINT = new CalcBase("IT_PROG_IVRMAINT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 5.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 66 roleID 42
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_DBA_WEBPORTAL = new CalcBase("IT_DBA_WEBPORTAL"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 110.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 66 roleID 40
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_SRPROG_WEBPORTAL = new CalcBase("IT_SRPROG_WEBPORTAL"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 110.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 66 roleID 41
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_PROG_WEBPORTAL = new CalcBase("IT_PROG_WEBPORTAL"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 530.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 67 roleID 41
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_PROG_WEBPORTAL_MAINT = new CalcBase("IT_PROG_WEBPORTAL_MAINT"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 5.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 68 roleID 41
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_PROG_IMAGEFILE_SETUP = new CalcBase("IT_PROG_IMAGEFILE_SETUP"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 1.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 69 roleID 28
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_ADMIN_IMAGEFILE_ONGOING = new CalcBase("IT_ADMIN_IMAGEFILE_ONGOING"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = .25;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 70 roleID 42
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_DBA_DBMANAGE = new CalcBase("IT_DBA_DBMANAGE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 25.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 70 roleID 40
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_SRPROG_DBMANAGE = new CalcBase("IT_SRPROG_DBMANAGE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 75.0;
+        return 0.0;
+    }
+};
+
+
+
+/**
+* @param RoleToTaskInstCVE
+* @param TraceEstimateCVE
+* @return double hours
+* based on taskID 70 roleID 41
+* returns the number of hours expected for this role and task
+*/
+
+public static CalcBase IT_PROG_DBMANAGE = new CalcBase("IT_PROG_DBMANAGE"){
+    public double runHourCalculation(RoleToTaskTemplateCVE rtt, TraceEstimateCVE est)
+    {
+        double unitCost = 200.0;
+        return 0.0;
+    }
+};
+
+
+

@@ -1,0 +1,11 @@
+##Deployed on D003 & DEVL 13-Jan-12##
+alter table TSM10.PHASE add(uuid VARCHAR2(128) default 0);
+alter table TSM10.indmap add(uuid VARCHAR2(128) default 0);
+alter table TSM10.country add(uuid VARCHAR2(128) default 0);
+alter table TSM10.procedure_def add(uuid VARCHAR2(128) default 0);
+alter table TSM10.odc_def add(uuid VARCHAR2(128) default 0);
+alter table tsm10.gm_client_defaults add (soc_enabled default 0);
+
+--*****************************************
+--Deployed upto this in Q005 on Feb 7, 2012
+--******************************************

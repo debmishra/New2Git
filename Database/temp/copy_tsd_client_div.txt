@@ -1,0 +1,582 @@
+client_id=0
+client_div_id=121
+
+cleint_div_id@mylink-->13
+
+declare
+
+projectid number(10);
+ftuserid number(10);
+indmapid number(10);
+
+cursor c1 is select id,project_id,indmap_id,locking_ftuser_id from trial@mylink
+where CLIENT_DIV_ID=13;
+
+begin
+
+for ix1 in c1 loop
+
+select  increment_sequence('project_seq') into projectid from dual;
+
+Insert into project select projectid,NAME,           
+ARCHIVED_FLG ,ARCHIVED_DATE,CLIENT_ID,IS_LIBRARY  from
+project@mylink where id=ix1.project_id;
+
+if ix1.locking_ftuser_id is not null then
+select id into ftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.locking_ftuser_id);
+else
+ftuserid:=null;
+end if;
+
+if ix1.indmap_id is not null then
+select a.id into indmapid from indmap a, indmap@mylink b where
+a.code=b.code and a.type=b.type and b.id=ix1.indmap_id;  
+else
+indmapid:=null;
+end if;
+
+insert into trial select increment_sequence('trial_seq'),
+GUID,TRIAL_STATUS,CREATED_BY,0,PROJECTID,INDMAPID,              
+PHASE_ID,WIZARD_PAGE_NUMBER,WIZARD_PAGE_FLG,FTUSERID,      
+LOCK_DATE,PLANNING_CURRENCY_ID,121,null,PROTOCOL_IDENTIFIER,    
+ix1.id from trial@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/ 
+
+declare
+
+uftuserid number(10);
+cftuserid number(10);
+lftuserid number(10);
+trialid number(10);
+
+cursor c1 is select id,UPDATED_BY_FTUSER_ID,CREATOR_FTUSER_ID,
+LOCKED_BY_FTUSER_ID,CONFIGURED_BY_TRIAL_ID  
+from tspd_template@mylink where client_div_id=13 and id <> 275;
+
+begin
+
+for ix1 in c1 loop
+
+if ix1.UPDATED_BY_FTUSER_ID is not null then
+select id into uftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.UPDATED_BY_FTUSER_ID);
+else
+uftuserid:=null;
+end if;
+
+if ix1.LOCKED_BY_FTUSER_ID is not null then
+select id into lftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.LOCKED_BY_FTUSER_ID);
+else
+lftuserid:=null;
+end if;
+
+if ix1.CREATOR_FTUSER_ID is not null then
+select id into cftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.CREATOR_FTUSER_ID);
+else
+cftuserid:=null;
+end if;
+
+if ix1.CONFIGURED_BY_TRIAL_ID is not null then
+select id into trialid from trial 
+where old_id=ix1.CONFIGURED_BY_TRIAL_ID;
+else
+trialid:=null;
+end if;
+
+insert into tspd_template select  ID,121,LAST_UPDATED,NAME,                   
+DATA ,SOFTWARE_VERSION,uFTUSERID,VERSION,STATUS,CREATE_DATE,
+CFTUSERID ,RELEASED_DATE,RETIRED_DATE,LOCALE,DATE_FORMAT,
+STARTEAM_TAG,LFTUSERID,TRIALID,TEMPLATE_TID,ARCHIVE_SEQ,COMMENTS,ID
+from tspd_template@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/                 
+
+declare
+
+uftuserid number(10);
+cftuserid number(10);
+lftuserid number(10);
+trialid number(10);
+
+cursor c1 is select id,UPDATED_BY_FTUSER_ID,CREATOR_FTUSER_ID,
+LOCKED_BY_FTUSER_ID,CONFIGURED_BY_TRIAL_ID  
+from tspd_template_history@mylink where client_div_id=13 and 
+tspd_template_id <> 275;
+
+begin
+
+for ix1 in c1 loop
+
+if ix1.UPDATED_BY_FTUSER_ID is not null then
+select id into uftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.UPDATED_BY_FTUSER_ID);
+else
+uftuserid:=null;
+end if;
+
+if ix1.LOCKED_BY_FTUSER_ID is not null then
+select id into lftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.LOCKED_BY_FTUSER_ID);
+else
+lftuserid:=null;
+end if;
+
+if ix1.CREATOR_FTUSER_ID is not null then
+select id into cftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.CREATOR_FTUSER_ID);
+else
+cftuserid:=null;
+end if;
+
+if ix1.CONFIGURED_BY_TRIAL_ID is not null then
+select id into trialid from trial 
+where old_id=ix1.CONFIGURED_BY_TRIAL_ID;
+else
+trialid:=null;
+end if;
+
+insert into tspd_template_history select  
+increment_sequence('tspd_template_history_seq'),HISTORY_DATE,
+TSPD_TEMPLATE_ID,121,LAST_UPDATED,NAME,                   
+DATA ,SOFTWARE_VERSION,uFTUSERID,VERSION,STATUS,CREATE_DATE,
+CFTUSERID ,RELEASED_DATE,RETIRED_DATE,LOCALE,DATE_FORMAT,
+STARTEAM_TAG,LFTUSERID,TRIALID,TEMPLATE_TID,ARCHIVE_SEQ,COMMENTS 
+from tspd_template_history@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/
+
+
+declare
+
+oftuserid number(10);
+cftuserid number(10);
+trialid number(10);
+
+cursor c1 is select TRIAL_ID,CREATOR_FTUSER_ID,OWNER_FTUSER_ID          
+from tspd_trial@mylink where trial_id in (select id from trial@mylink
+where client_div_id=13) and tspd_template_id <> 275;
+
+begin
+
+for ix1 in c1 loop
+
+if ix1.OWNER_FTUSER_ID is not null then
+select id into oftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.OWNER_FTUSER_ID);
+else
+oftuserid:=null;
+end if;
+
+if ix1.CREATOR_FTUSER_ID is not null then
+select id into cftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.CREATOR_FTUSER_ID);
+else
+cftuserid:=null;
+end if;
+
+select id into trialid from trial where old_id=ix1.trial_id;
+
+
+insert into tspd_trial select  
+TRIALID,TSPD_TEMPLATE_ID,CFTUSERID,OFTUSERID,CREATE_DATE,
+SHORT_TITLE,FULL_TITLE ,SHORT_DESC,FULL_DESC,INDICATION_DESC,
+STUDY_TYPE,STUDY_COUNTRIES,PLANNED_SITES,25,CLIENT_SUPPORT_ACCESS_ALLOWED,
+LOCKING_STATUS,LOCKING_AUTHOR_ASSIGN          
+from tspd_trial@mylink where trial_id=ix1.trial_id;
+
+end loop;
+
+end;
+/
+     
+
+declare
+    
+cursor c1 is select a.id, a.trial_id, a.AUTHOR_FTUSER_ID,a.ICP_INSTANCE_ID 
+from tspd_document@mylink a,tspd_trial@mylink b where a.trial_id in (select id 
+from trial@mylink where client_div_id=13) 
+and a.trial_id=b.trial_id and b.tspd_template_id <> 275;
+
+aftuserid number(10);
+icpinstanceid number(10);
+trialid number(10);
+
+begin
+
+for ix1 in c1 loop
+
+if ix1.AUTHOR_FTUSER_ID is not null then
+select id into aftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.AUTHOR_FTUSER_ID);
+else
+aftuserid:=null;
+end if;
+
+select id into trialid from trial where old_id=ix1.trial_id;
+select id into icpinstanceid from icp_instance where 
+old_id=ix1.icp_instance_id;
+
+insert into tspd_document select 
+increment_sequence('tspd_document_seq'),                            
+TRIALID,                       
+DOCUMENT_TYPE,                  
+DOCUMENT_NAME,                  
+AFTUSERID     ,          
+CREATE_DATE     ,               
+LAST_UPDATED     ,              
+VERSION_TIMESTAMP ,             
+DATA               ,            
+SNAPSHOT_TYPE       ,           
+SNAPSHOT_NAME        ,          
+SNAPSHOT_NOTES        ,         
+REVIEW_BY_DATE         ,        
+REVIEW_BY_TIME          ,       
+null,
+ICPINSTANCEID,                
+SNAPSHOT_STATUS,                
+DOCUMENT_NOTES  ,               
+SNAPSHOT_CREATE_DATE,           
+SOA_TBL_FORMAT       ,          
+REVIEW_REMINDER_DAYS  ,         
+AMEND_NAME             ,        
+LAST_COOKIE             ,       
+SOFTWARE_VERSION         ,      
+LOCALE                    ,     
+DATE_FORMAT                ,    
+AUTHOR_RELINQUISHED_DT      ,   
+AUTHOR_MODEL_TYPE            ,  
+PUBLIC_VISIBLE_FLG            , 
+MACROS_DIRTY                   ,
+UPDATE_REVISION_DOC_FLG,
+ix1.id              
+from tspd_document@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/
+
+create table x as select id,AMEND_TO_TSPD_DOCUMENT_ID from tspd_document@mylink
+where trial_id in(select id from trial@mylink where client_div_id=13) and
+AMEND_TO_TSPD_DOCUMENT_ID is not null and trial_id not in(
+select trial_id from tspd_trial@mylink where tspd_template_id=275);
+
+create table y as select id,AMEND_TO_TSPD_DOCUMENT_ID,old_id from 
+tspd_document where trial_id in (select
+id from trial where client_div_id=121);
+
+create table z as select id,AMEND_TO_TSPD_DOCUMENT_ID,old_id from 
+tspd_document where trial_id in (select
+id from trial where client_div_id=121);
+ 
+update y a set a.AMEND_TO_TSPD_DOCUMENT_ID =(
+select b.id from z b, x c where
+b.old_id=c.AMEND_TO_TSPD_DOCUMENT_ID and a.old_id=c.id)
+ 
+
+update TSPD_DOCUMENT a set a.AMEND_TO_TSPD_DOCUMENT_ID=(
+select y.AMEND_TO_TSPD_DOCUMENT_ID from y where y.id=a.id) where
+a.trial_id in (select id from trial where client_div_id=121);
+
+drop table x;
+drop table y;
+drop table z;
+
+insert into tspd_diagram select 
+increment_sequence('tspd_diagram_seq'),
+b.id,c.DIAGRAM,c.ICP_OBJECT_ID,c.ICP_OBJECT_TYPE,
+c.VERSION_TIMESTAMP from tspd_diagram@mylink c, icp_instance b
+where b.old_id=c.ICP_INSTANCE_ID and c.ICP_INSTANCE_ID in(
+select d.id from icp_instance@mylink d, trial@mylink e
+where d.trial_id=e.id and e.client_div_id=13);
+
+declare
+    
+cursor c1 is select a.id, a.tspd_document_id,a.AMEND_TO_TSPD_DOCUMENT_ID,
+a.trial_id, a.AUTHOR_FTUSER_ID,a.ICP_INSTANCE_ID 
+from tspd_document_history@mylink a,tspd_trial@mylink b where a.trial_id in (select id 
+from trial@mylink where client_div_id=13) 
+and a.trial_id=b.trial_id and b.tspd_template_id <> 275;
+
+aftuserid number(10);
+icpinstanceid number(10);
+trialid number(10);
+docid number(10);
+docamendid number(10);
+
+begin
+
+for ix1 in c1 loop
+
+if ix1.AUTHOR_FTUSER_ID is not null then
+select id into aftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.AUTHOR_FTUSER_ID);
+else
+aftuserid:=null;
+end if;
+
+select id into trialid from trial where old_id=ix1.trial_id;
+select id into icpinstanceid from icp_instance where 
+old_id=ix1.icp_instance_id;
+select id into docid from tspd_document where old_id=ix1.tspd_document_id;
+
+if ix1.AMEND_TO_TSPD_DOCUMENT_ID is not null then
+select id into docamendid from tspd_document where old_id=ix1.AMEND_TO_TSPD_DOCUMENT_ID;
+else
+docamendid:=null;
+end if;
+
+insert into tspd_document_history select 
+increment_sequence('tspd_document_history_seq'),
+history_date,
+docid,                            
+TRIALID,                       
+DOCUMENT_TYPE,                  
+DOCUMENT_NAME,                  
+AFTUSERID     ,          
+CREATE_DATE     ,               
+LAST_UPDATED     ,              
+VERSION_TIMESTAMP ,             
+DATA               ,            
+SNAPSHOT_TYPE       ,           
+SNAPSHOT_NAME        ,          
+SNAPSHOT_NOTES        ,         
+REVIEW_BY_DATE         ,        
+REVIEW_BY_TIME          ,       
+docamendid,
+ICPINSTANCEID,                
+SNAPSHOT_STATUS,                
+DOCUMENT_NOTES  ,               
+SNAPSHOT_CREATE_DATE,           
+SOA_TBL_FORMAT       ,          
+REVIEW_REMINDER_DAYS  ,         
+AMEND_NAME             ,        
+LAST_COOKIE             ,       
+SOFTWARE_VERSION                
+ 
+             
+from tspd_document_history@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/
+commit;
+
+
+insert into tspd_document_authors select
+increment_sequence('tspd_document_authors_seq'),
+b.id, c.id, a.document_type from
+tspd_document_authors@mylink a, TSPD_DOCUMENT b, ftuser c,
+ftuser@mylink d where a.ftuser_id=d.id and d.name=c.name
+and a.TSPD_DOCUMENT_ID=b.old_id and a.TSPD_DOCUMENT_ID in (
+select id from tspd_document@mylink where trial_id in (select
+id from trial@mylink where client_div_id=13) and trial_id not in(
+select trial_id from tspd_trial@mylink where tspd_template_id=275));
+commit;
+
+insert into tspd_doc_advisory select 
+increment_sequence('tspd_doc_advisory_seq'),b.id,
+a.STATUS,a.REASON_FOR_CLOSE,a.ADVISORY_OBJECT,a.ADVISORYID,a.USER_STATUS 
+from  tspd_doc_advisory@mylink a, tspd_document b where b.old_id=a.tspd_document_id and
+a.TSPD_DOCUMENT_ID in (
+select id from tspd_document@mylink where trial_id in (select
+id from trial@mylink where client_div_id=13) and trial_id not in(
+select trial_id from tspd_trial@mylink where tspd_template_id=275));          
+commit;
+
+insert into tspd_doc_reviewer select
+increment_sequence('tspd_doc_reviewer_seq'),
+c.id,b.id, a.REVIEW_STATUS,a.COMPLETION_STATUS,a.REVIEW_NOTES,
+a.USER_STATUS,a.VERSION_TIMESTAMP from
+tspd_doc_reviewer@mylink a, TSPD_DOCUMENT b, ftuser c,
+ftuser@mylink d where a.ftuser_id=d.id and d.name=c.name
+and a.TSPD_DOCUMENT_ID=b.old_id and a.TSPD_DOCUMENT_ID in (
+select id from tspd_document@mylink where trial_id in (select
+id from trial@mylink where client_div_id=13) and trial_id not in(
+select trial_id from tspd_trial@mylink where tspd_template_id=275));
+commit;
+
+
+declare
+    
+cursor c1 is select a.id, a.tspd_document_id, a.FTUSER_ID,a.DISPOSAL_FTUSER_ID 
+from tspd_doc_comment@mylink a where tspd_document_id in (select id from 
+tspd_document@mylink a,tspd_trial@mylink b where a.trial_id in (select id 
+from trial@mylink where client_div_id=13) 
+and a.trial_id=b.trial_id and b.tspd_template_id <> 275);
+
+dftuserid number(10);
+ftuserid number(10);
+docid number(10);
+ 
+begin
+
+for ix1 in c1 loop
+
+if ix1.DISPOSAL_FTUSER_ID is not null then
+select id into dftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.DISPOSAL_FTUSER_ID);
+else
+dftuserid:=null;
+end if;
+
+select id into ftuserid from ftuser where name=(select
+name from ftuser@mylink where id=ix1.FTUSER_ID);
+select id into docid from tspd_document where old_id=ix1.tspd_document_id;
+ 
+insert into tspd_doc_comment select 
+increment_sequence('tspd_document_seq'),                            
+COMMENTS,WORD_RANGE_START,WORD_RANGE_END,CREATE_DATE,
+DOCID,       
+FTUSERID,              
+HIDE_FLG,CONTEXT_TEXT,DOCSECTION_PATH,DISPOSAL_STATE,
+DFTUSERID,     
+null,     
+SECTION_RANGE_START,WIDE_CONTEXT_START,ix1.id                   
+from tspd_doc_comment@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/
+
+commit;
+
+create table x as select id,COUPLED_COMMENT_ID from tspd_doc_comment@mylink
+where tspd_document_id in (select id from tspd_document@mylink where trial_id in
+ ( select id from trial@mylink where client_div_id=13)  and trial_id not in(
+select trial_id from tspd_trial@mylink where tspd_template_id=275))
+and COUPLED_COMMENT_ID is not null;
+
+create table y as select id,COUPLED_COMMENT_ID,old_id from 
+tspd_doc_comment where tspd_document_id in (select id from tspd_document 
+where trial_id in (select id from trial where client_div_id=121));
+
+create table z as select id,COUPLED_COMMENT_ID,old_id from 
+tspd_doc_comment where tspd_document_id in (select id from tspd_document 
+where trial_id in (select id from trial where client_div_id=121));
+ 
+update y a set a.COUPLED_COMMENT_ID =(
+select b.id from z b, x c where
+b.old_id=c.COUPLED_COMMENT_ID and a.old_id=c.id);
+ 
+
+update TSPD_DOC_comment a set a.COUPLED_COMMENT_ID=(
+select y.COUPLED_COMMENT_ID from y where y.id=a.id) where a.tspd_document_id in (
+select id from tspd_document 
+where trial_id in (select id from trial where client_div_id=121));
+
+drop table x;
+drop table y;
+drop table z;
+
+alter table tspd_stat_model add old_id number(10);
+
+insert into tspd_stat_model select increment_sequence('tspd_stat_model_seq'),
+121,LABEL,
+MODEL_TYPE,
+LONG_DESC,
+ASSUMPTIONS,
+METHOD_NAME,
+PROC_SIGNATURE,
+METHOD_MATHML,
+null,
+OBSOLETE_FLG,
+METHOD_MATHML2,id
+from tspd_stat_model@mylink where client_div_id=13;
+
+alter table tspd_study_variable add old_id number(10);
+
+insert into tspd_study_variable select
+increment_sequence('tspd_study_variable_seq'),121,SHORT_DESC,ACRONYM,
+LONG_DESC,CODE1,CODING_SYSTEM1_ID,CODE2,CODING_SYSTEM2_ID,UOM_ID,
+UOM_SHORT_DESC,MIN_VALID,MAX_VALID,OBSOLETE_FLG,CODE3,
+CODING_SYSTEM3_ID,DEFINITION,LOW_NORMAL,HIGH_NORMAL,
+DATA_TYPE,DIMENSION,ORIGIN,ORIGINATION_METHOD,ORIGINATION_FUNC,id
+from tspd_study_variable@mylink where client_div_id=13;
+commit;
+
+
+declare
+    
+cursor c1 is select id, tspd_stat_model_id,TSPD_STUDY_VARIABLE_ID
+from tspd_analysis_var_mapping@mylink where client_div_id=13;
+
+modelid number(10);
+varid number(10);
+  
+begin
+
+for ix1 in c1 loop
+
+select id into modelid from tspd_stat_model where old_id=ix1.tspd_stat_model_id;
+select id into varid from TSPD_STUDY_VARIABLE where old_id=ix1.TSPD_STUDY_VARIABLE_ID;
+ 
+insert into tspd_analysis_var_mapping select 
+increment_sequence('tspd_analysis_var_mapping_seq'),                            
+121,modelid,varid,COMMENTS,OBSOLETE_FLG,IS_OUTPUT                                 
+from tspd_analysis_var_mapping@mylink where id=ix1.id;
+
+end loop;
+
+end;
+/
+
+alter table UNLISTED_PROCEDURE add old_id number(10);
+
+insert into UNLISTED_PROCEDURE select increment_sequence('unlisted_procedure_seq'),
+NAME,LONG_DESC,TYPE,OBSOLETE_FLG,OBSOLETE_DATE,PRICE,CURRENCY_ID,
+0,PROCEDURE_LEVEL,VERSION_TIMESTAMP,LOW,MID,HIGH,id
+from UNLISTED_PROCEDURE@mylink where client_id=0;
+
+declare
+
+procdefid number(10);
+customtaskid number(10);
+varid number(10);
+
+cursor c1 is select id,procedure_def_id,custom_task_id, STUDY_VARIABLE_ID          
+from tspd_variable_mapping@mylink where client_div_id=13;
+
+begin
+
+for ix1 in c1 loop
+
+if ix1.CUSTOM_TASK_ID is not null then
+select id into customtaskid from unlisted_procedure where old_id=ix1.custom_task_id;
+else
+customtaskid:=null;
+end if;
+
+if ix1.PROCEDURE_DEF_ID is not null then
+select a.id into procdefid from procedure_def a, procedure_def@mylink b where 
+a.cpt_code=b.cpt_code and b.id=ix1.PROCEDURE_DEF_ID;
+else
+procdefid:=null;
+end if;
+
+select id into varid from tspd_study_variable where old_id=ix1.STUDY_VARIABLE_ID;
+
+insert into tspd_variable_mapping select 
+increment_sequence('tspd_variable_mapping_seq'), 
+121,procdefid,customtaskid,varid,OBSOLETE_FLG,COMMENTS                      
+from tspd_variable_mapping@mylink where id=ix1.id;
+
+end loop;
+end;
+/
+commit;

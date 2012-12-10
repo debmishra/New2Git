@@ -1,0 +1,17 @@
+report4Ed_7.ksh
+report4Lori_2.ksh
+report4Lori_9.ksh
+report4Lori_12.ksh
+report4Lori_13.ksh
+report4Lori_14.ksh
+report4Lori_15.ksh
+report4Lori_16.ksh
+report4TSD_3.ksh
+report4Ed.ksh
+report4Lori.ksh
+report4Lori_10.ksh
+report4Lori_3.ksh
+report4Lori_7.ksh
+report4Lori_11.ksh
+report4TSD_1.ksh
+report4TSD_2.ksh

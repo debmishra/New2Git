@@ -1,0 +1,13 @@
+cp /work/proddata/hot/data02/cwmlite01.dbf  /r02/oracle/oradata/stby/cwmlite01.dbf 
+cp /work/proddata/hot/data02/drsys01.dbf /r02/oracle/oradata/stby/drsys01.dbf
+cp /work/proddata/hot/data03/ftlarge01.dbf /r03/oracle/oradata/stby/ftlarge01.dbf 
+cp /work/proddata/hot/data02/ftlarge_indx01.dbf /r02/oracle/oradata/stby/ftlarge_indx01.dbf 
+cp /work/proddata/hot/data03/ftsmall01.dbf /r03/oracle/oradata/stby/ftsmall01.dbf 
+cp /work/proddata/hot/data02/ftsmall_inx01.dbf /r02/oracle/oradata/stby/ftsmall_inx01.dbf 
+cp /work/proddata/hot/data02/system01.dbf /r02/oracle/oradata/stby/system01.dbf 
+cp /work/proddata/hot/data02/trialblob01.dbf /r02/oracle/oradata/stby/trialblob01.dbf 
+cp /work/proddata/hot/data03/tsmlarge01.dbf /r03/oracle/oradata/stby/tsmlarge01.dbf 
+cp /work/proddata/hot/data02/tsmlarge_indx01.dbf /r02/oracle/oradata/stby/tsmlarge_indx01.dbf 
+cp /work/proddata/hot/data03/tsmsmall01.dbf /r03/oracle/oradata/stby/tsmsmall01.dbf 
+cp /work/proddata/hot/data02/tsmsmall_inx01.dbf /r02/oracle/oradata/stby/tsmsmall_inx01.dbf  
+cp /work/proddata/hot/data02/undotbs01.dbf /r02/oracle/oradata/stby/undotbs01.dbf 

@@ -1,0 +1,10 @@
+insert into tc10.cro_exp_area(id,name) values (1,'Clinical Research');
+insert into tc10.cro_exp_area(id,name) values (2,'Data Management/Statistics');
+insert into tc10.cro_exp_area(id,name) values (3,'Laboratory Analysis');
+insert into tc10.cro_exp_area(id,name) values (4,'Medical Writing');
+insert into tc10.cro_exp_area(id,name) values (5,'Quality Assurance');
+insert into tc10.cro_exp_area(id,name) values (6,'Regulatory Affairs');
+insert into tc10.cro_exp_area(id,name) values (7,'Pre-clinical/Toxicology');
+insert into tc10.cro_exp_area(id,name) values (8,'Development and Packaging');
+insert into tc10.cro_exp_area(id,name) values (9,'Other');
+commit;

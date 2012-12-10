@@ -1,0 +1,85 @@
+#!/bin/ksh
+#
+#
+# This program is the confidential and proprietary product of 
+# Fast Track Systems, Inc.  Any unauthorized use, reproduction, 
+# or transfer of this program is strictly prohibited.  
+# Copyright (C) 2000 by Fast Track Systems, Inc.  
+# All rights reserved.
+# 
+# $Workfile: archive_audit_log.ksh$ 
+#
+# $Revision: 2$        $Date: 8/2/2002 11:31:50 AM$
+#
+#
+# Description:  <ADD>
+#
+#############################################################
+. /etc/profile
+
+
+export ORACLE_SID=prod
+
+export ORACLE_USER=backup_user
+export ORACLE_PWD=`get_pwd $ORACLE_USER`
+
+
+sqlplus -s $ORACLE_USER/$ORACLE_PWD << EOF
+
+Insert into dmishra.aud_tab(SESSIONID,ENTRYID,        
+STATEMENT,TIMESTAMP#,USERID,USERHOST,TERMINAL,       
+ACTION#,RETURNCODE,OBJ\$CREATOR,OBJ\$NAME,      
+AUTH\$PRIVILEGES,AUTH\$GRANTEE,NEW\$OWNER,NEW\$NAME,       
+SES\$ACTIONS,SES\$TID,LOGOFF\$LREAD,LOGOFF\$PREAD,   
+LOGOFF\$LWRITE,LOGOFF\$DEAD,LOGOFF\$TIME,    
+COMMENT\$TEXT,CLIENTID,SPARE1,SPARE2,OBJ\$LABEL,      
+SES\$LABEL,PRIV\$USED,SESSIONCPU) 
+select SESSIONID,ENTRYID,STATEMENT,TIMESTAMP#,     
+USERID,USERHOST,TERMINAL,ACTION#,RETURNCODE,     
+OBJ\$CREATOR,OBJ\$NAME,AUTH\$PRIVILEGES,
+AUTH\$GRANTEE,NEW\$OWNER,NEW\$NAME,SES\$ACTIONS,    
+SES\$TID,LOGOFF\$LREAD,LOGOFF\$PREAD,LOGOFF\$LWRITE,  
+LOGOFF\$DEAD,LOGOFF\$TIME,COMMENT\$TEXT,CLIENTID,       
+SPARE1,SPARE2,OBJ\$LABEL,SES\$LABEL,PRIV\$USED,      
+SESSIONCPU from sys.aud\$ where action# <> 100;
+
+delete from sys.aud\$ where action# <> 100;
+
+commit;
+
+EOF
+
+if [[ $(date +%a) = Sun ]]
+   then
+
+/u01/app/oracle/product/10.2.0/bin/exp USERID=$ORACLE_USER/$ORACLE_PWD \
+TABLES=dmishra.aud_tab \
+FILE=/orabackup/prod/audit_dump/audit_trail_prod.dmp \
+LOG=/orabackup/prod/audit_dump/audit_trail_prod.log
+
+mv /orabackup/prod/audit_dump/audit_trail_prod.dmp /orabackup/prod/audit_dump/audit_trail_prod.dmp.$(date +%m%d%y)
+mv /orabackup/prod/audit_dump/audit_trail_prod.log /orabackup/prod/audit_dump/audit_trail_prod.log.$(date +%m%d%y)
+
+
+sqlplus -s $ORACLE_USER/$ORACLE_PWD << EOF
+
+truncate table dmishra.aud_tab;
+
+EOF
+
+fi
+
+
+
+
+
+#############################################################
+# MODIFICATION HISTORY:
+#
+# $Log: 
+#  2    DevTSM    1.1         8/2/2002 11:31:50 AM Debashish Mishra Added the
+#       truncate statement
+#  1    DevTSM    1.0         8/2/2002 11:26:09 AM Debashish Mishra 
+# $
+# 
+#############################################################

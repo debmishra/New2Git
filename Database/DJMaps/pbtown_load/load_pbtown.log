@@ -1,0 +1,646 @@
+old   1: truncate table "&1".Cro_contract_to_country
+new   1: truncate table "TSM10".Cro_contract_to_country
+
+Table truncated.
+
+old   1: truncate table "&1".Cro_cost_to_act_detail
+new   1: truncate table "TSM10".Cro_cost_to_act_detail
+
+Table truncated.
+
+old   1: delete from "&1".Cro_activity_detail
+new   1: delete from "TSM10".Cro_activity_detail
+
+226 rows deleted.
+
+old   1: truncate table "&1".Cro_cost_overlap
+new   1: truncate table "TSM10".Cro_cost_overlap
+
+Table truncated.
+
+
+Commit complete.
+
+No errors.
+
+'CRO_COST_OVERLAP'                                                              
+--------------------------------------------------------------------------------
+cro_cost_overlap                                                                
+
+drop sequence tsm_stage.cro_cost_overlap_seq
+                        *
+ERROR at line 1:
+ORA-02289: sequence does not exist 
+
+
+
+Sequence created.
+
+old   1: insert into "&1".cro_cost_overlap (id,CRO_COST_ID,CRO_CATEGORY_ID,other)
+new   1: insert into "TSM10".cro_cost_overlap (id,CRO_COST_ID,CRO_CATEGORY_ID,other)
+old   2:  select tsm_stage.cro_cost_overlap_seq.nextval,a.id,null, a.overlapw from tsm_stage.cro_cost1 a, "&1".cro_cost b
+new   2:  select tsm_stage.cro_cost_overlap_seq.nextval,a.id,null, a.overlapw from tsm_stage.cro_cost1 a, "TSM10".cro_cost b
+
+4366 rows created.
+
+
+Commit complete.
+
+
+'CRO_ACTIVITY_DETAIL'                                                           
+--------------------------------------------------------------------------------
+Cro_activity_detail                                                             
+
+alter table tsm_stage.cro_activity_detail1 add cro_category_id number(10)
+                                               *
+ERROR at line 1:
+ORA-01430: column being added already exists in table 
+
+
+old   2:   (select b.id from "&1".cro_category b where b.category_account=a.act_id)
+new   2:   (select b.id from "TSM10".cro_category b where b.category_account=a.act_id)
+
+226 rows updated.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_activity_detail (id,CRO_CATEGORY_ID,SUB_TXT,CHOICE_TEXT,DECIMALS,INPUT,USE_DATA,DEFAULT_VAL,SUB_ID,
+new   1: insert into "TSM10".cro_activity_detail (id,CRO_CATEGORY_ID,SUB_TXT,CHOICE_TEXT,DECIMALS,INPUT,USE_DATA,DEFAULT_VAL,SUB_ID,
+
+226 rows created.
+
+
+Commit complete.
+
+
+'CRO_COST_TO_ACT_DETAIL'                                                        
+--------------------------------------------------------------------------------
+Cro_cost_to_act_detail                                                          
+
+drop sequence tsm_stage.cro_cost_to_act_detail_seq
+                        *
+ERROR at line 1:
+ORA-02289: sequence does not exist 
+
+
+
+Sequence created.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+9527 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+14595 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+2802 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+20102 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+7933 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+11778 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+6730 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+6987 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+12030 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+4181 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+3650 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+8985 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+476 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+6712 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+1885 rows created.
+
+
+Commit complete.
+
+old   1: insert into "&1".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+new   1: insert into "TSM10".cro_cost_to_act_detail (ID,CRO_COST_ID,CRO_ACTIVITY_DETAIL_ID ,NUMERIC_INPUT,ITEM_SEQ )
+
+2254 rows created.
+
+
+Commit complete.
+
+
+'CRO_CONTRACT_TO_COUNTRY'                                                       
+--------------------------------------------------------------------------------
+Cro_contract_to_country                                                         
+
+	drop sequence tsm_stage.cro_contract_to_country_seq
+	                        *
+ERROR at line 1:
+ORA-02289: sequence does not exist 
+
+
+
+Sequence created.
+
+	drop table tsm_stage.x
+	                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table created.
+
+old   9: 	select id into countryid from "&1".country
+new   9: 	select id into countryid from "TSM10".country
+old  11: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  11: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  15: 	select id into countryid from "&1".country
+new  15: 	select id into countryid from "TSM10".country
+old  17: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  17: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  22: /*	select id into countryid from "&1".country
+new  22: /*	select id into countryid from "TSM10".country
+old  24: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  24: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  29: 	select id into countryid from "&1".country
+new  29: 	select id into countryid from "TSM10".country
+old  31: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  31: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  36: 	select id into countryid from "&1".country
+new  36: 	select id into countryid from "TSM10".country
+old  38: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  38: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  43: /*	select id into countryid from "&1".country
+new  43: /*	select id into countryid from "TSM10".country
+old  45: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  45: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  50: 	select id into countryid from "&1".country
+new  50: 	select id into countryid from "TSM10".country
+old  52: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  52: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  57: 	select id into countryid from "&1".country
+new  57: 	select id into countryid from "TSM10".country
+old  59: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  59: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  64: 	select id into countryid from "&1".country
+new  64: 	select id into countryid from "TSM10".country
+old  66: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  66: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  71: 	select id into countryid from "&1".country
+new  71: 	select id into countryid from "TSM10".country
+old  73: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  73: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  78: 	select id into countryid from "&1".country
+new  78: 	select id into countryid from "TSM10".country
+old  80: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  80: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  85: 	select id into countryid from "&1".country
+new  85: 	select id into countryid from "TSM10".country
+old  87: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  87: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  92: 	select id into countryid from "&1".country
+new  92: 	select id into countryid from "TSM10".country
+old  94: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new  94: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old  99: 	select id into countryid from "&1".country
+new  99: 	select id into countryid from "TSM10".country
+old 101: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 101: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 106: 	select id into countryid from "&1".country
+new 106: 	select id into countryid from "TSM10".country
+old 108: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 108: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 113: 	select id into countryid from "&1".country
+new 113: 	select id into countryid from "TSM10".country
+old 115: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 115: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 120: 	select id into countryid from "&1".country
+new 120: 	select id into countryid from "TSM10".country
+old 122: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 122: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 127: 	select id into countryid from "&1".country
+new 127: 	select id into countryid from "TSM10".country
+old 129: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 129: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 134: 	select id into countryid from "&1".country
+new 134: 	select id into countryid from "TSM10".country
+old 136: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 136: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 141: 	select id into countryid from "&1".country
+new 141: 	select id into countryid from "TSM10".country
+old 143: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 143: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 148: 	select id into countryid from "&1".country
+new 148: 	select id into countryid from "TSM10".country
+old 150: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 150: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 155: /*	select id into countryid from "&1".country
+new 155: /*	select id into countryid from "TSM10".country
+old 157: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 157: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 162: 	select id into countryid from "&1".country
+new 162: 	select id into countryid from "TSM10".country
+old 164: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 164: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 169: 	select id into countryid from "&1".country
+new 169: 	select id into countryid from "TSM10".country
+old 171: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 171: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 176: 	select id into countryid from "&1".country
+new 176: 	select id into countryid from "TSM10".country
+old 178: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 178: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 183: 	select id into countryid from "&1".country
+new 183: 	select id into countryid from "TSM10".country
+old 185: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 185: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 190: 	select id into countryid from "&1".country
+new 190: 	select id into countryid from "TSM10".country
+old 192: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 192: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 197: 	select id into countryid from "&1".country
+new 197: 	select id into countryid from "TSM10".country
+old 199: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 199: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 204: 	select id into countryid from "&1".country
+new 204: 	select id into countryid from "TSM10".country
+old 206: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 206: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 211: 	select id into countryid from "&1".country
+new 211: 	select id into countryid from "TSM10".country
+old 213: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 213: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 218: 	select id into countryid from "&1".country
+new 218: 	select id into countryid from "TSM10".country
+old 220: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 220: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 225: 	select id into countryid from "&1".country
+new 225: 	select id into countryid from "TSM10".country
+old 227: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 227: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 232: 	select id into countryid from "&1".country
+new 232: 	select id into countryid from "TSM10".country
+old 234: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 234: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 239: 	select id into countryid from "&1".country
+new 239: 	select id into countryid from "TSM10".country
+old 241: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 241: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 246: 	select id into countryid from "&1".country
+new 246: 	select id into countryid from "TSM10".country
+old 248: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 248: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 253: 	select id into countryid from "&1".country
+new 253: 	select id into countryid from "TSM10".country
+old 255: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 255: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 260: 	select id into countryid from "&1".country
+new 260: 	select id into countryid from "TSM10".country
+old 262: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 262: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 267: 	select id into countryid from "&1".country
+new 267: 	select id into countryid from "TSM10".country
+old 269: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 269: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 274: 	select id into countryid from "&1".country
+new 274: 	select id into countryid from "TSM10".country
+old 276: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 276: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 281: 	select id into countryid from "&1".country
+new 281: 	select id into countryid from "TSM10".country
+old 283: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 283: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 288: 	select id into countryid from "&1".country
+new 288: 	select id into countryid from "TSM10".country
+old 290: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 290: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 295: 	select id into countryid from "&1".country
+new 295: 	select id into countryid from "TSM10".country
+old 297: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 297: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 302: 	select id into countryid from "&1".country
+new 302: 	select id into countryid from "TSM10".country
+old 304: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 304: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 309: 	select id into countryid from "&1".country
+new 309: 	select id into countryid from "TSM10".country
+old 311: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 311: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 316: 	select id into countryid from "&1".country
+new 316: 	select id into countryid from "TSM10".country
+old 318: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 318: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 323: 	select id into countryid from "&1".country
+new 323: 	select id into countryid from "TSM10".country
+old 325: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 325: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 330: 	select id into countryid from "&1".country
+new 330: 	select id into countryid from "TSM10".country
+old 332: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 332: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 337: 	select id into countryid from "&1".country
+new 337: 	select id into countryid from "TSM10".country
+old 339: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 339: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 344: 	select id into countryid from "&1".country
+new 344: 	select id into countryid from "TSM10".country
+old 346: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 346: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 351: 	select id into countryid from "&1".country
+new 351: 	select id into countryid from "TSM10".country
+old 353: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 353: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 358: 	select id into countryid from "&1".country
+new 358: 	select id into countryid from "TSM10".country
+old 360: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 360: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 365: 	select id into countryid from "&1".country
+new 365: 	select id into countryid from "TSM10".country
+old 367: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 367: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 372: 	select id into countryid from "&1".country
+new 372: 	select id into countryid from "TSM10".country
+old 374: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 374: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 379: 	select id into countryid from "&1".country
+new 379: 	select id into countryid from "TSM10".country
+old 381: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 381: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 386: 	select id into countryid from "&1".country
+new 386: 	select id into countryid from "TSM10".country
+old 388: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 388: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 393: 	select id into countryid from "&1".country
+new 393: 	select id into countryid from "TSM10".country
+old 395: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 395: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 400: 	select id into countryid from "&1".country
+new 400: 	select id into countryid from "TSM10".country
+old 402: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 402: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 407: 	select id into countryid from "&1".country
+new 407: 	select id into countryid from "TSM10".country
+old 409: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 409: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 414: 	select id into countryid from "&1".country
+new 414: 	select id into countryid from "TSM10".country
+old 416: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 416: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 421: 	select id into countryid from "&1".country
+new 421: 	select id into countryid from "TSM10".country
+old 423: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 423: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 428: 	select id into countryid from "&1".country
+new 428: 	select id into countryid from "TSM10".country
+old 430: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 430: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 435: 	select id into countryid from "&1".country
+new 435: 	select id into countryid from "TSM10".country
+old 437: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 437: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 442: 	select id into countryid from "&1".country
+new 442: 	select id into countryid from "TSM10".country
+old 444: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 444: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 449: 	select id into countryid from "&1".country
+new 449: 	select id into countryid from "TSM10".country
+old 451: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 451: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 456: 	select id into countryid from "&1".country
+new 456: 	select id into countryid from "TSM10".country
+old 458: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 458: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 463: 	select id into countryid from "&1".country
+new 463: 	select id into countryid from "TSM10".country
+old 465: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 465: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 470: 	select id into countryid from "&1".country
+new 470: 	select id into countryid from "TSM10".country
+old 472: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 472: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 477: 	select id into countryid from "&1".country
+new 477: 	select id into countryid from "TSM10".country
+old 479: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 479: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 484: 	select id into countryid from "&1".country
+new 484: 	select id into countryid from "TSM10".country
+old 486: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 486: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 491: 	select id into countryid from "&1".country
+new 491: 	select id into countryid from "TSM10".country
+old 493: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 493: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 498: 	select id into countryid from "&1".country
+new 498: 	select id into countryid from "TSM10".country
+old 500: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 500: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 505: 	select id into countryid from "&1".country
+new 505: 	select id into countryid from "TSM10".country
+old 507: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 507: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 512: 	select id into countryid from "&1".country
+new 512: 	select id into countryid from "TSM10".country
+old 514: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 514: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 519: 	select id into countryid from "&1".country
+new 519: 	select id into countryid from "TSM10".country
+old 521: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 521: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 526: 	select id into countryid from "&1".country
+new 526: 	select id into countryid from "TSM10".country
+old 528: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 528: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 533: 	select id into countryid from "&1".country
+new 533: 	select id into countryid from "TSM10".country
+old 535: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 535: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 540: 	select id into countryid from "&1".country
+new 540: 	select id into countryid from "TSM10".country
+old 542: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 542: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 547: 	select id into countryid from "&1".country
+new 547: 	select id into countryid from "TSM10".country
+old 549: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 549: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 554: 	select id into countryid from "&1".country
+new 554: 	select id into countryid from "TSM10".country
+old 556: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 556: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 561: 	select id into countryid from "&1".country
+new 561: 	select id into countryid from "TSM10".country
+old 563: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 563: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 568: 	select id into countryid from "&1".country
+new 568: 	select id into countryid from "TSM10".country
+old 570: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 570: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 575: 	select id into countryid from "&1".country
+new 575: 	select id into countryid from "TSM10".country
+old 577: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 577: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 582: 	select id into countryid from "&1".country
+new 582: 	select id into countryid from "TSM10".country
+old 584: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 584: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 589: 	select id into countryid from "&1".country
+new 589: 	select id into countryid from "TSM10".country
+old 591: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 591: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 596: 	select id into countryid from "&1".country
+new 596: 	select id into countryid from "TSM10".country
+old 598: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 598: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 603: 	select id into countryid from "&1".country
+new 603: 	select id into countryid from "TSM10".country
+old 605: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 605: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 610: 	select id into countryid from "&1".country
+new 610: 	select id into countryid from "TSM10".country
+old 612: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 612: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 617: 	select id into countryid from "&1".country
+new 617: 	select id into countryid from "TSM10".country
+old 619: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 619: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 624: 	select id into countryid from "&1".country
+new 624: 	select id into countryid from "TSM10".country
+old 626: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 626: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+old 631: 	select id into countryid from "&1".country
+new 631: 	select id into countryid from "TSM10".country
+old 633: 	insert into "&1".cro_contract_to_country ( id, cro_contract_id, country_id)
+new 633: 	insert into "TSM10".cro_contract_to_country ( id, cro_contract_id, country_id)
+
+PL/SQL procedure successfully completed.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".cro_protocol) where table_name='cro_protocol'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".cro_protocol) where table_name='cro_protocol'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".cro_name_master) where table_name='cro_name_master'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".cro_name_master) where table_name='cro_name_master'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".cro_contract) where table_name='cro_contract'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".cro_contract) where table_name='cro_contract'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".cro_cost) where table_name='cro_cost'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".cro_cost) where table_name='cro_cost'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".cro_cost_overlap) where table_name='cro_cost_overlap'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".cro_cost_overlap) where table_name='cro_cost_overlap'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".Cro_activity_detail) where table_name='cro_activity_detail'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".Cro_activity_detail) where table_name='cro_activity_detail'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".Cro_cost_to_act_detail) where table_name='cro_cost_to_act_detail'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".Cro_cost_to_act_detail) where table_name='cro_cost_to_act_detail'
+
+1 row updated.
+
+old   1: update "&1".id_control set next_id=(select nvl(max(id),0)+1 from "&1".Cro_contract_to_country) where table_name='cro_contract_to_country'
+new   1: update "TSM10".id_control set next_id=(select nvl(max(id),0)+1 from "TSM10".Cro_contract_to_country) where table_name='cro_contract_to_country'
+
+1 row updated.
+
+
+Commit complete.
+

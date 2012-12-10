@@ -1,0 +1,56 @@
+#!/bin/ksh
+#
+#
+# This program is the confidential and proprietary product of 
+# Fast Track Systems, Inc.  Any unauthorized use, reproduction, 
+# or transfer of this program is strictly prohibited.  
+# Copyright (C) 2000 by Fast Track Systems, Inc.  
+# All rights reserved.
+# 
+# $Workfile: designer_new_trials_weekly.ksh$
+#
+# $Revision: 1$        $Date: 08-May-09$
+#
+#
+# Description:  <ADD>
+#
+#############################################################
+cd /export/home/oracle
+. /etc/profile
+. ./.profile
+
+mailinglist="cnichols@mdsol.com,dgemzik@mdsol.com,ppatel@mdsol.com"
+cclist="mpasupuleti@mdsol.com,dmishra@mdsol.com"
+sender="noreply@mdsol.com"
+
+export ORACLE_SID=prod
+export current_date=`date`
+sqlplus -s tsm10/`get_pwd tsm10` <<EOF 
+
+set feedback off
+set lin 300
+set pages 1000
+alter session set nls_date_format='DD-MON-YYYY HH24:MI';
+set markup html on 
+spool /export/home/oracle/log/designer_new_trials_weekly.html
+
+set heading off
+ttitle left 'Report run date: '_DATE' PDT' SKIP 2 -
+       left bold ' Designer New Trials Created Last Week';
+set heading on
+
+SELECT d.client_div_identifier "Client Division", a.protocol_identifier "Trial",
+ b.first_name||' '||b.last_name "Created By", To_Char(c.create_date,'MM/DD/YYYY HH24:MI') "Created On" 
+FROM trial a,ftuser b, tspd_trial c,client_div d
+WHERE a.client_div_id=d.id and
+a.id=c.trial_id and 
+c.creator_ftuser_id=b.id  AND c.create_date BETWEEN SYSDATE-7 AND SYSDATE
+ORDER BY 1,3;
+
+spool off
+set markup html off;
+exit;
+EOF
+
+cat /export/home/oracle/log/designer_new_trials_weekly.html | \
+uuencode designer_new_trials_weekly.html | mailx -s "Designer New Trials -- Weekly" -r $sender -c $cclist $mailinglist

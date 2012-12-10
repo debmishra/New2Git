@@ -1,0 +1,4 @@
+$ORA_HOME/bin/sqlldr \
+CONTROL=$ftdc_dir/t1usage.ctl, LOG=$ftdc_dir/t1usage.log, \
+BAD=$ftdc_dir/t1usage.bad, \
+USERID=ftdc/welcome@devl errors=1000

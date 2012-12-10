@@ -1,0 +1,491 @@
+
+conn tsm10/welcome
+
+drop table drug_class;
+drop table drug_code;
+drop table milestone_template;
+drop table milestone_inst;
+drop table project_phase;
+drop table rate_set;
+drop table role_template;
+drop table role_inst;
+drop table role_inst_to_task_inst;
+drop table task_group_template;
+drop table task_group_inst;
+drop table task_inst;
+drop table task_template;
+drop table role_template_to_task_template;
+drop table trace_estimate;
+drop table trace_audit_history;
+drop table trace_user_prefs;
+
+
+
+
+Create table drug_class(
+	id number(10),
+	name varchar2(256) not null)
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table drug_class add constraint drug_class_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table drug_code(
+	id number(10),
+	client_id number(10),
+	name varchar2(256) not null)
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table drug_code add constraint drug_code_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table milestone_template(
+	id number(10),
+	name varchar2(256) not null,
+	sequence number(4))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table milestone_template add constraint milestone_template_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table milestone_inst(
+	id number(10),
+	milestone_template_id number(10) not null,
+	milestone_date date not null,
+	trace_estimate_id number(10) not null)
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table milestone_inst add constraint milestone_inst_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table project_phase(
+	id number(10),
+	start_milestone_template_id number(10) not null,
+	end_milestone_template_id number(10) not null,
+	name varchar2(64) not null)
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table project_phase add constraint project_phase_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table rate_Set(
+	id number(10),
+	name varchar2(64) not null,
+	effective_start_date date,
+	effective_end_date date,
+	client_div_id number(10),
+	country_id number(10))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table rate_Set add constraint rate_set_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table role_template(
+	id number(10),
+	name varchar2(64),
+	category varchar2(20),
+	sequence number(4))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table role_template add constraint role_template_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table role_inst(
+	id number(10),
+	role_template_id number(10),
+	salary_rate number(12,2),
+	cro_rate number(12,2),
+	rate_set_id number(10))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table role_inst add constraint role_inst_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table role_inst_to_task_inst(
+	id number(10),
+	task_inst_id number(10),
+	role_inst_id number(10),
+	calc_hours number(5),
+	adj_hours number(5),
+	comments varchar2(128),
+	trace_estimate_id number(10),
+	role_to_task_template_id number(10))
+	tablespace tsmlarge 
+	pctused 60 pctfree 25;
+
+Alter table role_inst_to_task_inst add constraint role_inst_to_task_inst_pk
+	primary key (id) using index tablespace tsmlarge_indx
+	pctfree 25;
+
+Create table task_group_template(
+	id number(10),
+	name varchar2(64),
+	sequence number(4))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table task_group_template add constraint task_group_template_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table task_group_inst(
+	id number(10),
+	task_group_template_id number(10) not null,
+	locked_by_ftuser_id number(10),
+	locked_date Date,
+	review_status varchar2(20),
+	trace_estimate_id number(10),
+	reviewer_ftuser_id number(10),
+	Trace_audit_history_id number(10))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table task_group_inst add constraint task_group_inst_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table task_inst(
+	id number(10),
+	task_template_id number(10),
+	task_group_inst_id number(10),
+	recalc_flg number(1) default 0 not null,
+	trace_estimate_id number(10))
+	tablespace tsmlarge 
+	pctused 60 pctfree 25;
+
+Alter table task_inst add constraint task_inst_pk
+	primary key (id) using index tablespace tsmlarge_indx
+	pctfree 25;
+
+Alter table task_inst add constraint task_inst_recalc_flg_check
+	check (recalc_flg in (0,1));
+
+Create table task_template(
+	id number(10),
+	name varchar2(256),
+	sequence number(4),
+	task_group_template_id number(10),
+	start_milestone_template_id number(10),
+	end_milestone_template_id number(10))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table task_template add constraint task_template_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table role_to_task_template(
+	id number(10),
+	task_template_id number(10),
+	role_template_id number(10),
+	hours_per_role number(8,2),
+	calculation_name varchar2(64),
+	sequence number(4))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table role_to_task_template add constraint role_to_task_template_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Create table trace_estimate(
+	id number(10),
+	trial_id number(10),
+	rate_set_id number(10),
+	country_id number(10),
+	site_count number(5),
+	locked_by_ftuser_id number(10),
+	locked_date date,
+	notify_reviewers number(1) default 0 not null,
+	patients_enrolled number(5),
+	patients_screened number(5),
+	patients_complete number(5),
+	qual_site_visits number(5),
+	init_site_visits number(5),
+	routine_site_visits number(5),
+	closeout_site_visits number(5),
+	qual_visit_hours number(5),
+	init_visit_hours number(5),
+	routine_visit_hours number(5),
+	closeout_visit_hours number(5),
+	travel_hours_visit number(5),
+	visit_prep_hours number(5),
+	patient_crf_pages number(5),
+	query_page_pct number(12,2),
+	unique_crf_pages number(5),
+	vendor_count number(5),
+	investig_payment_count number(5),
+	lab_report_count number(5),
+	other_report_count number(5),
+	sae_count number(5),
+	spons_staff_invmtg_count number(5),
+	cost_internal number(12,2),
+	cost_external number(12,2),
+	total_adj_fte_hours number(12,2),
+	cro_staff_invmtg_count number(5),
+	joint_staff_invmtg_count number(5),
+	pct_complete number(12,2),
+	pct_pending number(12,2),
+	joint_meeting_dur number(5),
+	published_flg number(1) default 0 not null,
+	calc_version number(6))
+	tablespace tsmsmall 
+	pctused 60 pctfree 25;
+
+Alter table trace_estimate add constraint trace_estimate_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Alter table trace_estimate add constraint te_published_flg_check
+	check (published_flg in (0,1));
+
+Alter table trace_estimate add constraint te_notify_reviewers_check
+	check (notify_reviewers in (0,1));
+
+Create table trace_audit_history(
+	id number(10),
+	ftuser_id number(10),
+	comments varchar2(128),
+	trial_id number(10),
+	type varchar2(40),
+	history_date date,
+	parent_id number(10),
+	parent_type varchar2(40))
+	tablespace tsmlarge 
+	pctused 60 pctfree 25;
+
+Alter table trace_audit_history add constraint trace_audit_history_pk
+	primary key (id) using index tablespace tsmlarge_indx
+	pctfree 25;
+
+Alter table trace_audit_history add constraint tah_parent_type_check
+	check(parent_type in('Trial','TraceEst','TaskGroup'));
+
+Create table trace_user_prefs(
+	id number(10),
+	notify_author number(1) default 0 not null,
+	publish_warn_flg number(1) default 0 not null)
+	tablespace tsmsmall
+	pctused 60 pctfree 25;
+
+Alter table trace_user_prefs add constraint trace_user_prefs_pk
+	primary key (id) using index tablespace tsmsmall_indx
+	pctfree 25;
+
+Alter table trace_user_prefs add constraint tup_notify_author_check
+	check (notify_author in (0,1));
+
+Alter table trace_user_prefs add constraint tup_publish_warn_flg_check
+	check (publish_warn_flg in (0,1));
+
+
+-- Trace foreign keys
+
+
+Alter table drug_code add constraint drug_code_fk1 
+	foreign key(client_id) references client(id);
+
+Alter table milestone_inst add constraint milestone_inst_fk1 
+	foreign key(milestone_template_id) references milestone_template(id);
+
+Alter table milestone_inst add constraint milestone_inst_fk2 
+	foreign key(trace_estimate_id) references trace_estimate(id);
+
+Alter table project_phase add constraint project_phase_fk1 
+	foreign key(start_milestone_template_id) references milestone_template(id);
+
+Alter table project_phase add constraint project_phase_fk2 
+	foreign key(end_milestone_template_id) references milestone_template(id);
+
+Alter table rate_Set add constraint rate_Set_fk1 
+	foreign key(client_div_id) references client_div(id);
+
+Alter table rate_Set add constraint rate_Set_fk2 
+	foreign key(country_id) references country(id);
+
+Alter table role_inst add constraint role_inst_fk1 
+	foreign key(role_template_id) references role_template(id);
+
+Alter table role_inst add constraint role_inst_fk2 
+	foreign key(rate_set_id) references rate_set(id);
+
+Alter table role_inst_to_task_inst add constraint role_inst_to_task_inst_fk1 
+	foreign key(role_inst_id) references role_inst(id);
+
+Alter table role_inst_to_task_inst add constraint role_inst_to_task_inst_fk2 
+	foreign key(task_inst_id) references task_inst(id);
+
+Alter table role_inst_to_task_inst add constraint role_inst_to_task_inst_fk3 
+	foreign key(trace_estimate_id) references trace_estimate(id);
+
+Alter table role_inst_to_task_inst add constraint role_inst_to_task_inst_fk4 
+	foreign key(role_to_task_template_id) references role_to_task_template(id);
+
+Alter table task_group_inst add constraint task_group_inst_fk1 
+	foreign key(task_group_template_id) references task_group_template(id);
+
+Alter table task_group_inst add constraint task_group_inst_fk2 
+	foreign key(trace_estimate_id) references trace_estimate(id);
+
+Alter table task_group_inst add constraint task_group_inst_fk3 
+	foreign key(locked_by_ftuser_id) references ftuser(id);
+
+Alter table task_group_inst add constraint task_group_inst_fk4 
+	foreign key(reviewer_ftuser_id) references ftuser(id);
+
+Alter table task_group_inst add constraint task_group_inst_fk5 
+	foreign key(Trace_audit_history_id) references Trace_audit_history(id);
+
+Alter table task_inst add constraint task_inst_fk1 
+	foreign key(task_template_id) references task_template(id);
+
+Alter table task_inst add constraint task_inst_fk2 
+	foreign key(task_group_inst_id) references task_group_inst(id);
+
+Alter table task_inst add constraint task_inst_fk3 
+	foreign key(trace_estimate_id) references trace_estimate(id);
+
+Alter table task_template add constraint task_template_fk1 
+	foreign key(task_group_template_id) references task_group_template(id);
+
+Alter table task_template add constraint task_template_fk2 
+	foreign key(start_milestone_template_id) references milestone_template(id);
+
+Alter table task_template add constraint task_template_fk3 
+	foreign key(end_milestone_template_id) references milestone_template(id);
+
+Alter table role_to_task_template add constraint role_to_task_template_fk1 
+	foreign key(task_template_id) references task_template(id);
+
+Alter table role_to_task_template add constraint role_to_task_template_fk2 
+	foreign key(role_template_id) references role_template(id);
+
+Alter table trace_estimate add constraint trace_estimate_fk1 
+	foreign key(trial_id) references trial(id);
+
+Alter table trace_estimate add constraint trace_estimate_fk2 
+	foreign key(rate_set_id) references rate_set(id);
+
+Alter table trace_estimate add constraint trace_estimate_fk3 
+	foreign key(locked_by_ftuser_id) references ftuser(id);
+
+Alter table trace_estimate add constraint trace_estimate_fk4 
+	foreign key(country_id) references country(id);
+
+Alter table trace_audit_history add constraint trace_audit_history_fk1 
+	foreign key(trial_id) references trial(id);
+
+Alter table trace_audit_history add constraint trace_audit_history_fk2 
+	foreign key(ftuser_id) references ftuser(id);
+
+
+-- sequences
+
+drop sequence drug_class_seq;
+drop sequence drug_code_seq;
+drop sequence milestone_template_seq;
+drop sequence milestone_inst_seq;
+drop sequence project_phase_seq;
+drop sequence rate_set_seq;
+drop sequence role_template_seq;
+drop sequence role_inst_seq;
+drop sequence role_inst_to_task_inst_seq;
+drop sequence task_group_template_seq;
+drop sequence task_group_inst_seq;
+drop sequence task_inst_seq;
+drop sequence task_template_seq;
+drop sequence role_to_task_template_seq;
+drop sequence trace_estimate_seq;
+drop sequence trace_audit_history_seq;
+drop sequence trace_user_prefs_seq;
+
+create sequence drug_class_seq;
+create sequence drug_code_seq;
+create sequence milestone_template_seq;
+create sequence milestone_inst_seq;
+create sequence project_phase_seq;
+create sequence rate_set_seq;
+create sequence role_template_seq;
+create sequence role_inst_seq;
+create sequence role_inst_to_task_inst_seq;
+create sequence task_group_template_seq;
+create sequence task_group_inst_seq;
+create sequence task_inst_seq;
+create sequence task_template_seq;
+create sequence role_to_task_template_seq;
+create sequence trace_estimate_seq;
+create sequence trace_audit_history_seq;
+create sequence trace_user_prefs_seq;
+
+-- grants for trace
+
+grant select,references on drug_class to ft15;
+grant select,references on drug_code to ft15;
+grant select,references on trace_audit_history to ft15;
+
+
+-- ft15 changes
+
+conn ft15/welcome
+
+grant select,insert, update, delete, references on protocol_version to tsm10;
+
+conn tsm10/welcome
+
+create synonym protocol_version for ft15.protocol_version;
+
+conn ft15/welcome
+
+Alter table ftuser add(active_trace_user number(1) default 0 not null,
+		       active_tsm_user number(1) default 0 not null);
+
+Alter table ftuser add constraint ftuser_active_trace_user_check
+	check (active_trace_user in (0,1));
+
+Alter table ftuser add constraint ftuser_active_tsm_user_check
+	check (active_tsm_user in (0,1));
+
+
+Alter table trial add (
+	nickname varchar2(40), 
+	drug_code_id number(10),
+	drug_class_id number(10),
+	trace_archived number(1) default 0 not null,
+	trace_archived_date date,
+	trace_locked_by_id number(10),
+	trace_author_id number(10),
+	trace_create_date date,
+	trace_audit_history_id number(10));
+
+
+Alter table trial add constraint trial_fk8 
+	foreign key(drug_code_id) references tsm10.drug_code(id);
+
+Alter table trial add constraint trial_fk9 
+	foreign key(drug_class_id) references tsm10.drug_class(id);
+			
+Alter table trial add constraint trial_fk10 
+	foreign key(trace_locked_by_id) references ftuser(id);
+
+Alter table trial add constraint trial_fk11 
+	foreign key(trace_author_id) references ftuser(id);
+
+Alter table trial add constraint trial_fk12 
+	foreign key(trace_audit_history_id) references tsm10.trace_audit_history(id);
+

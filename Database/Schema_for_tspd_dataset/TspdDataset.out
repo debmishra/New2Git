@@ -1,0 +1,387 @@
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+old   1: grant select,references on indmap to "&1"
+new   1: grant select,references on indmap to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on phase to "&1"
+new   1: grant select,references on phase to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on procedure_def to "&1"
+new   1: grant select,references on procedure_def to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on mapper to "&1"
+new   1: grant select,references on mapper to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on protocol to "&1"
+new   1: grant select,references on protocol to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on procedure_to_protocol to "&1"
+new   1: grant select,references on procedure_to_protocol to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on protocol_to_indmap to "&1"
+new   1: grant select,references on protocol_to_indmap to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on odc_def to "&1"
+new   1: grant select,references on odc_def to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on investig to "&1"
+new   1: grant select,references on investig to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on payments to "&1"
+new   1: grant select,references on payments to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on country to "&1"
+new   1: grant select,references on country to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on currency to "&1"
+new   1: grant select,references on currency to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ft_foreign_key_info to "&1"
+new   1: grant select,references on ft_foreign_key_info to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on build_tag to "&1"
+new   1: grant select,references on build_tag to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+old   1: grant select,references on price_level to "&1"
+new   1: grant select,references on price_level to "TSM10_TSPD_40"
+
+Grant succeeded.
+
+drop table tspd_trial_freq
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table mapper
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table tspd_proc_freq
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+drop sequence tspd_proc_freq_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence tspd_proc_pricing_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence tspd_trial_freq_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+old   3: 	"&1".PHASE(id)
+new   3: 	"TSM10".PHASE(id)
+
+Table altered.
+
+old   3: 	"&1".INDMAP(id)
+new   3: 	"TSM10".INDMAP(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".odc_def(id)
+new   3: 	"TSM10".odc_def(id)
+
+Table altered.
+
+old   3: 	"&1".Procedure_def(id)
+new   3: 	"TSM10".Procedure_def(id)
+
+Table altered.
+
+old   3: 	"&1".PHASE(id)
+new   3: 	"TSM10".PHASE(id)
+
+Table altered.
+
+old   3: 	"&1".INDMAP(id)
+new   3: 	"TSM10".INDMAP(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".PHASE(id)
+new   3: 	"TSM10".PHASE(id)
+
+Table altered.
+
+old   3: 	"&1".INDMAP(id)
+new   3: 	"TSM10".INDMAP(id)
+
+Table altered.
+
+drop synonym odc_def
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym phase
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym procedure_def
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym indmap
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym protocol
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym procedure_to_protocol
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym protocol_to_indmap
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym investig
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym payments
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym country
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym currency
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ft_foreign_key_info
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym build_tag
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym price_level
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+old   1: create synonym odc_def for "&1".odc_def
+new   1: create synonym odc_def for "TSM10".odc_def
+
+Synonym created.
+
+old   1: create synonym phase for "&1".phase
+new   1: create synonym phase for "TSM10".phase
+
+Synonym created.
+
+old   1: create synonym procedure_def for "&1".procedure_def
+new   1: create synonym procedure_def for "TSM10".procedure_def
+
+Synonym created.
+
+old   1: create synonym indmap for "&1".indmap
+new   1: create synonym indmap for "TSM10".indmap
+
+Synonym created.
+
+old   1: create synonym protocol for "&1".protocol
+new   1: create synonym protocol for "TSM10".protocol
+
+Synonym created.
+
+old   1: create synonym procedure_to_protocol for "&1".procedure_to_protocol
+new   1: create synonym procedure_to_protocol for "TSM10".procedure_to_protocol
+
+Synonym created.
+
+old   1: create synonym protocol_to_indmap for "&1".protocol_to_indmap
+new   1: create synonym protocol_to_indmap for "TSM10".protocol_to_indmap
+
+Synonym created.
+
+old   1: create synonym investig for "&1".investig
+new   1: create synonym investig for "TSM10".investig
+
+Synonym created.
+
+old   1: create synonym payments for "&1".payments
+new   1: create synonym payments for "TSM10".payments
+
+Synonym created.
+
+old   1: create synonym country for "&1".country
+new   1: create synonym country for "TSM10".country
+
+Synonym created.
+
+old   1: create synonym currency for "&1".currency
+new   1: create synonym currency for "TSM10".currency
+
+Synonym created.
+
+old   1: create synonym ft_foreign_key_info for "&1".ft_foreign_key_info
+new   1: create synonym ft_foreign_key_info for "TSM10".ft_foreign_key_info
+
+Synonym created.
+
+old   1: create synonym build_tag for "&1".build_tag
+new   1: create synonym build_tag for "TSM10".build_tag
+
+Synonym created.
+
+old   1: create synonym price_level for "&1".price_level
+new   1: create synonym price_level for "TSM10".price_level
+
+Synonym created.
+
+old   1: Grant select,insert,update,delete on tspd_proc_freq to "&1"
+new   1: Grant select,insert,update,delete on tspd_proc_freq to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on mapper to "&1"
+new   1: Grant select,insert,update,delete on mapper to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on tspd_proc_pricing to "&1"
+new   1: Grant select,insert,update,delete on tspd_proc_pricing to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on tspd_trial_freq to "&1"
+new   1: Grant select,insert,update,delete on tspd_trial_freq to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select on tspd_proc_pricing_seq to "&1"
+new   1: Grant select on tspd_proc_pricing_seq to "TSM10"
+
+Grant succeeded.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+

@@ -1,0 +1,3057 @@
+drop user tsm10_40 cascade
+          *
+ERROR at line 1:
+ORA-01918: user 'TSM10_40' does not exist
+
+
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+old   1: grant select,references on affiliation_factor to "&1"
+new   1: grant select,references on affiliation_factor to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on build_tag to "&1"
+new   1: grant select,references on build_tag to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on country to "&1"
+new   1: grant select,references on country to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on client_currency_cnv to "&1"
+new   1: grant select,references on client_currency_cnv to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on indmap to "&1"
+new   1: grant select,references on indmap to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on institution to "&1"
+new   1: grant select,references on institution to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ip_business_factors to "&1"
+new   1: grant select,references on ip_business_factors to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ip_cpp to "&1"
+new   1: grant select,references on ip_cpp to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ip_duration to "&1"
+new   1: grant select,references on ip_duration to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ip_duration_factor to "&1"
+new   1: grant select,references on ip_duration_factor to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on pap_euro_overhead to "&1"
+new   1: grant select,references on pap_euro_overhead to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ip_weight to "&1"
+new   1: grant select,references on ip_weight to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on mapper to "&1"
+new   1: grant select,references on mapper to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on odc_def to "&1"
+new   1: grant select,references on odc_def to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on phase to "&1"
+new   1: grant select,references on phase to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on procedure_def to "&1"
+new   1: grant select,references on procedure_def to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ip_duration_factor to "&1"
+new   1: grant select,references on ip_duration_factor to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on region to "&1"
+new   1: grant select,references on region to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on umbrella_orgs to "&1"
+new   1: grant select,references on umbrella_orgs to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on pap_odc_pct to "&1"
+new   1: grant select,references on pap_odc_pct to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on currency to "&1"
+new   1: grant select,references on currency to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on specificity to "&1"
+new   1: grant select,references on specificity to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on modelled_coeff to "&1"
+new   1: grant select,references on modelled_coeff to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on md_odc_oh_pct to "&1"
+new   1: grant select,references on md_odc_oh_pct to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on modelled_inclusion to "&1"
+new   1: grant select,references on modelled_inclusion to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on modelled_upfence to "&1"
+new   1: grant select,references on modelled_upfence to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on modelled_standardize to "&1"
+new   1: grant select,references on modelled_standardize to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on modelled_cpp_fence to "&1"
+new   1: grant select,references on modelled_cpp_fence to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on ft_foreign_key_info to "&1"
+new   1: grant select,references on ft_foreign_key_info to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on build_code to "&1"
+new   1: grant select,references on build_code to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on protocol to "&1"
+new   1: grant select,references on protocol to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on derived_prices to "&1"
+new   1: grant select,references on derived_prices to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on protocol_to_indmap "&1"
+new   1: grant select,references on protocol_to_indmap "TSM10_40"
+grant select,references on protocol_to_indmap "TSM10_40"
+                                              *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+drop table own_procedure
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table own_odc
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table own_site
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table own_protocol
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table own_investig
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table id_control
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table databld_run_prop
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table databld_run
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table data_by_year
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table pap_institution_odc_cost
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table g50_COMPANY_PAP_ODC_COST
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table COMPANY_PAP_ODC_COST
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table INDUSTRY_PAP_ODC_COST
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table g50_pap_clinical_proc_cost
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table g50_ip_study_price
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table g50_pap_overhead
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table modelled_cpp_fence
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table modelled_inclusion
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table modelled_upfence
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table modelled_standardize
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table md_odc_oh_pct
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table modelled_coeff
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+Drop table IP_study_price
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+Drop table PAP_clinical_proc_cost
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+Drop table institution_overhead
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+Drop table pap_overhead
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+Drop table pap_Institution_proc_cost
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table mapper
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table gm_proc_freq
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+drop table gm_trial_freq
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Function created.
+
+
+Function created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+drop sequence PAP_clinical_proc_cost_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence institution_overhead_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence pap_overhead_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence pap_Institution_proc_cost_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence ip_study_price_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence mapper_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence modelled_coeff_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence md_odc_oh_pct_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence modelled_inclusion_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence modelled_upfence_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence modelled_standardize_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence modelled_cpp_fence_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence g50_PAP_clinical_proc_cost_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence g50_pap_overhead_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence g50_ip_study_price_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence COMPANY_PAP_ODC_COST_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence INDUSTRY_PAP_ODC_COST_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence g50_COMPANY_PAP_ODC_COST_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence pap_Institution_odc_cost_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence DATA_BY_YEAR_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence own_procedure_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence own_odc_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence own_site_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence own_protocol_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence own_investig_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence gm_proc_freq_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+drop sequence gm_trial_freq_seq
+              *
+ERROR at line 1:
+ORA-02289: sequence does not exist
+
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+old   3: 	"&1".PHASE(id)
+new   3: 	"TSM10".PHASE(id)
+
+Table altered.
+
+old   3: 	"&1".INDMAP(id)
+new   3: 	"TSM10".INDMAP(id)
+
+Table altered.
+
+old   3: 	"&1".PHASE(id)
+new   3: 	"TSM10".PHASE(id)
+
+Table altered.
+
+old   3: 	"&1".INDMAP(id)
+new   3: 	"TSM10".INDMAP(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".Institution(id)
+new   3: 	"TSM10".Institution(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".specificity(id)
+new   3: 	"TSM10".specificity(id)
+
+Table altered.
+
+old   3: 	"&1".Institution(id)
+new   3: 	"TSM10".Institution(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".specificity(id)
+new   3: 	"TSM10".specificity(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".odc_def(id)
+new   3: 	"TSM10".odc_def(id)
+
+Table altered.
+
+old   3: 	"&1".Procedure_def(id)
+new   3: 	"TSM10".Procedure_def(id)
+
+Table altered.
+
+old   3: 	"&1".country(id)
+new   3: 	"TSM10".country(id)
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".country(id)
+new   3: 	"TSM10".country(id)
+
+Table altered.
+
+old   3: 	"&1".country(id)
+new   3: 	"TSM10".country(id)
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".country(id)
+new   3: 	"TSM10".country(id)
+
+Table altered.
+
+old   3: 	"&1".country(id)
+new   3: 	"TSM10".country(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".specificity(id)
+new   3: 	"TSM10".specificity(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".specificity(id)
+new   3: 	"TSM10".specificity(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".Country(id)
+new   3: 	"TSM10".Country(id)
+
+Table altered.
+
+old   3: 	"&1".phase(id)
+new   3: 	"TSM10".phase(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3: 	"&1".indmap(id)
+new   3: 	"TSM10".indmap(id)
+
+Table altered.
+
+old   3: 	"&1".Institution(id)
+new   3: 	"TSM10".Institution(id)
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+old   3:	 references "&1".country(id)
+new   3:	 references "TSM10".country(id)
+
+Table altered.
+
+old   3:	 references "&1".institution(id)
+new   3:	 references "TSM10".institution(id)
+
+Table altered.
+
+old   3:	 references "&1".phase(id)
+new   3:	 references "TSM10".phase(id)
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".indmap(id)
+new   3:	 references "TSM10".indmap(id)
+
+Table altered.
+
+old   3:	 references "&1".indmap(id)
+new   3:	 references "TSM10".indmap(id)
+
+Table altered.
+
+old   3:	 references "&1".country(id)
+new   3:	 references "TSM10".country(id)
+
+Table altered.
+
+old   3:	 references "&1".build_code(id)
+new   3:	 references "TSM10".build_code(id)
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".Phase(id)
+new   3:	 references "TSM10".Phase(id)
+
+Table altered.
+
+old   3:	 references "&1".indmap(id)
+new   3:	 references "TSM10".indmap(id)
+
+Table altered.
+
+old   3:	 references "&1".indmap(id)
+new   3:	 references "TSM10".indmap(id)
+
+Table altered.
+
+old   3:	 references "&1".build_code(id)
+new   3:	 references "TSM10".build_code(id)
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".institution(id)
+new   3:	 references "TSM10".institution(id)
+
+Table altered.
+
+old   3:	 references "&1".Country(id)
+new   3:	 references "TSM10".Country(id)
+
+Table altered.
+
+old   3:	 references "&1".Build_code(id)
+new   3:	 references "TSM10".Build_code(id)
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".Build_code(id)
+new   3:	 references "TSM10".Build_code(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+old   3:	 references "&1".Build_code(id)
+new   3:	 references "TSM10".Build_code(id)
+
+Table altered.
+
+
+Table altered.
+
+old   3:	 references "&1".currency(id)
+new   3:	 references "TSM10".currency(id)
+
+Table altered.
+
+drop synonym affiliation_factor
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym build_tag
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym country
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym client_currency_cnv
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym indmap
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym institution
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ip_business_factors
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ip_cpp
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ip_duration
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ip_duration_factor
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym pap_euro_overhead
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ip_weight
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym odc_def
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym phase
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym procedure_def
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym region
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym umbrella_orgs
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym pap_odc_pct
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym currency
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym specificity
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym ft_foreign_key_info
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym build_code
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym protocol
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym protocol_to_indmap
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+old   1: create synonym affiliation_factor for "&1".affiliation_factor
+new   1: create synonym affiliation_factor for "TSM10".affiliation_factor
+
+Synonym created.
+
+old   1: create synonym build_tag for "&1".build_tag
+new   1: create synonym build_tag for "TSM10".build_tag
+
+Synonym created.
+
+old   1: create synonym country for "&1".country
+new   1: create synonym country for "TSM10".country
+
+Synonym created.
+
+old   1: create synonym client_currency_cnv for "&1".client_currency_cnv
+new   1: create synonym client_currency_cnv for "TSM10".client_currency_cnv
+
+Synonym created.
+
+old   1: create synonym indmap for "&1".indmap
+new   1: create synonym indmap for "TSM10".indmap
+
+Synonym created.
+
+old   1: create synonym institution for "&1".institution
+new   1: create synonym institution for "TSM10".institution
+
+Synonym created.
+
+old   1: create synonym ip_business_factors for "&1".ip_business_factors
+new   1: create synonym ip_business_factors for "TSM10".ip_business_factors
+
+Synonym created.
+
+old   1: create synonym ip_cpp for "&1".ip_cpp
+new   1: create synonym ip_cpp for "TSM10".ip_cpp
+
+Synonym created.
+
+old   1: create synonym ip_duration for "&1".ip_duration
+new   1: create synonym ip_duration for "TSM10".ip_duration
+
+Synonym created.
+
+old   1: create synonym ip_duration_factor for "&1".ip_duration_factor
+new   1: create synonym ip_duration_factor for "TSM10".ip_duration_factor
+
+Synonym created.
+
+old   1: create synonym pap_euro_overhead for "&1".pap_euro_overhead
+new   1: create synonym pap_euro_overhead for "TSM10".pap_euro_overhead
+
+Synonym created.
+
+old   1: create synonym ip_weight for "&1".ip_weight
+new   1: create synonym ip_weight for "TSM10".ip_weight
+
+Synonym created.
+
+old   1: create synonym odc_def for "&1".odc_def
+new   1: create synonym odc_def for "TSM10".odc_def
+
+Synonym created.
+
+old   1: create synonym phase for "&1".phase
+new   1: create synonym phase for "TSM10".phase
+
+Synonym created.
+
+old   1: create synonym procedure_def for "&1".procedure_def
+new   1: create synonym procedure_def for "TSM10".procedure_def
+
+Synonym created.
+
+old   1: create synonym region for "&1".region
+new   1: create synonym region for "TSM10".region
+
+Synonym created.
+
+old   1: create synonym umbrella_orgs for "&1".umbrella_orgs
+new   1: create synonym umbrella_orgs for "TSM10".umbrella_orgs
+
+Synonym created.
+
+old   1: create synonym pap_odc_pct for "&1".pap_odc_pct
+new   1: create synonym pap_odc_pct for "TSM10".pap_odc_pct
+
+Synonym created.
+
+old   1: create synonym currency for "&1".currency
+new   1: create synonym currency for "TSM10".currency
+
+Synonym created.
+
+old   1: create synonym specificity for "&1".specificity
+new   1: create synonym specificity for "TSM10".specificity
+
+Synonym created.
+
+old   1: create synonym ft_foreign_key_info for "&1".ft_foreign_key_info
+new   1: create synonym ft_foreign_key_info for "TSM10".ft_foreign_key_info
+
+Synonym created.
+
+old   1: create synonym build_code for "&1".build_code
+new   1: create synonym build_code for "TSM10".build_code
+
+Synonym created.
+
+old   1: create synonym protocol for "&1".protocol
+new   1: create synonym protocol for "TSM10".protocol
+
+Synonym created.
+
+old   1: create synonym protocol_to_indmap for "&1".protocol_to_indmap
+new   1: create synonym protocol_to_indmap for "TSM10".protocol_to_indmap
+
+Synonym created.
+
+old   1: Grant select,insert,update,delete on institution_overhead to "&1"
+new   1: Grant select,insert,update,delete on institution_overhead to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on pap_Institution_proc_cost to "&1"
+new   1: Grant select,insert,update,delete on pap_Institution_proc_cost to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on pap_overhead to "&1"
+new   1: Grant select,insert,update,delete on pap_overhead to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on PAP_clinical_proc_cost to "&1"
+new   1: Grant select,insert,update,delete on PAP_clinical_proc_cost to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on ip_study_price to "&1"
+new   1: Grant select,insert,update,delete on ip_study_price to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on mapper to "&1"
+new   1: Grant select,insert,update,delete on mapper to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on PAP_OVERHEAD_ODC to "&1"
+new   1: Grant select,insert,update,delete on PAP_OVERHEAD_ODC to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on PAP_OVERHEAD_OVERHEAD to "&1"
+new   1: Grant select,insert,update,delete on PAP_OVERHEAD_OVERHEAD to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on PAP_OVERHEAD_PCT_PAID to "&1"
+new   1: Grant select,insert,update,delete on PAP_OVERHEAD_PCT_PAID to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on md_odc_oh_pct to "&1"
+new   1: Grant select,insert,update,delete on md_odc_oh_pct to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on modelled_coeff to "&1"
+new   1: Grant select,insert,update,delete on modelled_coeff to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on modelled_inclusion to "&1"
+new   1: Grant select,insert,update,delete on modelled_inclusion to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on modelled_upfence to "&1"
+new   1: Grant select,insert,update,delete on modelled_upfence to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on modelled_standardize to "&1"
+new   1: Grant select,insert,update,delete on modelled_standardize to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on modelled_cpp_fence to "&1"
+new   1: Grant select,insert,update,delete on modelled_cpp_fence to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on g50_pap_overhead to "&1"
+new   1: Grant select,insert,update,delete on g50_pap_overhead to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on g50_PAP_clinical_proc_cost to "&1"
+new   1: Grant select,insert,update,delete on g50_PAP_clinical_proc_cost to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on g50_ip_study_price to "&1"
+new   1: Grant select,insert,update,delete on g50_ip_study_price to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on COMPANY_PAP_ODC_COST to "&1"
+new   1: Grant select,insert,update,delete on COMPANY_PAP_ODC_COST to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on INDUSTRY_PAP_ODC_COST to "&1"
+new   1: Grant select,insert,update,delete on INDUSTRY_PAP_ODC_COST to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on g50_COMPANY_PAP_ODC_COST to "&1"
+new   1: Grant select,insert,update,delete on g50_COMPANY_PAP_ODC_COST to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on pap_Institution_odc_cost to "&1"
+new   1: Grant select,insert,update,delete on pap_Institution_odc_cost to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on data_by_year to "&1"
+new   1: Grant select,insert,update,delete on data_by_year to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on databld_run  to "&1"
+new   1: Grant select,insert,update,delete on databld_run  to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on databld_run_prop	to "&1"
+new   1: Grant select,insert,update,delete on databld_run_prop	to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on id_control to "&1"
+new   1: Grant select,insert,update,delete on id_control to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on own_procedure to "&1"
+new   1: Grant select,insert,update,delete on own_procedure to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on own_odc to "&1"
+new   1: Grant select,insert,update,delete on own_odc to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on own_site to "&1"
+new   1: Grant select,insert,update,delete on own_site to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on own_protocol to "&1"
+new   1: Grant select,insert,update,delete on own_protocol to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on own_investig to "&1"
+new   1: Grant select,insert,update,delete on own_investig to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on gm_proc_freq to "&1"
+new   1: Grant select,insert,update,delete on gm_proc_freq to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on gm_trial_freq to "&1"
+new   1: Grant select,insert,update,delete on gm_trial_freq to "TSM10"
+
+Grant succeeded.
+
+old   1: insert into mapper select * from "&1".mapper
+new   1: insert into mapper select * from "TSM10".mapper
+
+5483 rows created.
+
+
+Commit complete.
+
+old   1: grant select,references on client_div to "&1"
+new   1: grant select,references on client_div to "TSM10_40"
+
+Grant succeeded.
+
+old   1: grant select,references on client_div_to_lic_country to "&1"
+new   1: grant select,references on client_div_to_lic_country to "TSM10_40"
+
+Grant succeeded.
+
+drop synonym client_div
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+drop synonym client_div_to_lic_country
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+old   1: create synonym client_div for "&1".client_div
+new   1: create synonym client_div for "TSM10".client_div
+
+Synonym created.
+
+old   1: create synonym client_div_to_lic_country for "&1".client_div_to_lic_country
+new   1: create synonym client_div_to_lic_country for "TSM10".client_div_to_lic_country
+
+Synonym created.
+
+SP2-0734: unknown command beginning "id	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "indmap_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0734: unknown command beginning "cpp	     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "cpv	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "phase_id  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "investig_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0734: unknown command beginning "phase1type..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "primary_in..." - rest of line ignored.
+SP2-0734: unknown command beginning "entry_date..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "tablespace..." - rest of line ignored.
+  grant_date 		 date,
+  *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ON temp_ip..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+CREATE INDEX temp_ip_study_price_indx1
+                                     *
+ERROR at line 1:
+ORA-00969: missing ON keyword
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "USING INDE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "indmap_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "phase_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "phase1type..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_ip_study_price
+                              *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "id	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0734: unknown command beginning "indmap_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "protocol_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "currency_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "cpp	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "cpv	     ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "cpgv      ..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0734: unknown command beginning "payment   ..." - rest of line ignored.
+SP2-0734: unknown command beginning "phase_id  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "mapper_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "payments_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "entry_date..." - rest of line ignored.
+SP2-0734: unknown command beginning "primary_in..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "tablespace..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+  grant_date		 DATE	      NULL,
+  *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ON temp_od..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0042: unknown command "mapper_id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+CREATE INDEX temp_odc_indx1
+                          *
+ERROR at line 1:
+ORA-00969: missing ON keyword
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "USING INDE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "indmap_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "currency_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "phase_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "mapper_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "protocol_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_odc
+                   *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "id	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "adj_other_..." - rest of line ignored.
+SP2-0734: unknown command beginning "adj_ovrhd_..." - rest of line ignored.
+SP2-0734: unknown command beginning "affiliatio..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "indmap_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0734: unknown command beginning "protocol_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0734: unknown command beginning "ovrhd_basi..." - rest of line ignored.
+SP2-0734: unknown command beginning "ovrhd_pct ..." - rest of line ignored.
+SP2-0734: unknown command beginning "pct_paid  ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "phase_id  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "zip_code  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning "adj18mo_fl..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "primary_fl..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "investig_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "primary_in..." - rest of line ignored.
+SP2-0734: unknown command beginning "entry_date..." - rest of line ignored.
+SP2-0734: unknown command beginning ")tablespac..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+  grant_date		 DATE	      NULL,
+  *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ON temp_ov..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "PCTFREE   ..." - rest of line ignored.
+CREATE INDEX temp_overhead_indx1
+                               *
+ERROR at line 1:
+ORA-00969: missing ON keyword
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "adj18mo_fl..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "affiliatio..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "primary_fl..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "USING INDE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE  5" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "indmap_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "phase_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "protocol_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_overhead
+                        *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "id	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "indmap_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0734: unknown command beginning "currency_i..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "payment   ..." - rest of line ignored.
+SP2-0734: unknown command beginning "phase_id  ..." - rest of line ignored.
+SP2-0734: unknown command beginning "mapper_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning "primary_fl..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0734: unknown command beginning "payments_i..." - rest of line ignored.
+SP2-0734: unknown command beginning "entry_date..." - rest of line ignored.
+SP2-0734: unknown command beginning "primary_in..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "tablespace..." - rest of line ignored.
+  grant_date		 DATE	      NULL,
+  *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ON temp_pr..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0042: unknown command "mapper_id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+CREATE INDEX temp_procedure_indx1
+                                *
+ERROR at line 1:
+ORA-00969: missing ON keyword
+
+
+SP2-0734: unknown command beginning "ON temp_pr..." - rest of line ignored.
+SP2-0042: unknown command "mapper_id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+CREATE INDEX temp_procedure_indx2
+                                *
+ERROR at line 1:
+ORA-00969: missing ON keyword
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "active_flg..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "primary_fl..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "USING INDE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE 5" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "indmap_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "build_code..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "currency_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "phase_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "mapper_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "ta_indmap_..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "indgroup_i..." - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE temp_procedure
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "id	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "country_id..." - rest of line ignored.
+SP2-0734: unknown command beginning "low_price ..." - rest of line ignored.
+SP2-0734: unknown command beginning "med_price ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "high_price..." - rest of line ignored.
+SP2-0734: unknown command beginning ""TYPE"    ..." - rest of line ignored.
+  procedure_def_id NUMBER(10,0) NULL,
+  *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+    procedure_def_id is null or odc_def_id is null
+    *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0734: unknown command beginning "type in ('..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE derived_prices
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "USING INDE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0042: unknown command "PCTFREE  5" - rest of line ignored.
+ALTER TABLE derived_prices
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "country_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE derived_prices
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+    procedure_def_id
+    *
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "odc_def_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE derived_prices
+                         *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "id	     ..." - rest of line ignored.
+SP2-0734: unknown command beginning "phase_id N..." - rest of line ignored.
+SP2-0734: unknown command beginning "indmap_id ..." - rest of line ignored.
+SP2-0734: unknown command beginning "complexity..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "rec_cnt NU..." - rest of line ignored.
+SP2-0734: unknown command beginning "complexity..." - rest of line ignored.
+SP2-0734: unknown command beginning "complexity..." - rest of line ignored.
+SP2-0734: unknown command beginning "complexity..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "specificit..." - rest of line ignored.
+SP2-0734: unknown command beginning "pct_ids   ..." - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+CREATE TABLE complexity_hist (
+                             *
+ERROR at line 1:
+ORA-00904: : invalid identifier
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0042: unknown command ")" - rest of line ignored.
+SP2-0734: unknown command beginning "USING INDE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0734: unknown command beginning "TABLESPACE..." - rest of line ignored.
+SP2-0734: unknown command beginning "PCTFREE   ..." - rest of line ignored.
+ALTER TABLE complexity_hist
+                          *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+SP2-0734: unknown command beginning "ADD CONSTR..." - rest of line ignored.
+SP2-0042: unknown command "phase_id" - rest of line ignored.
+SP2-0734: unknown command beginning ") REFERENC..." - rest of line ignored.
+SP2-0042: unknown command "id" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command ")" - rest of line ignored.
+ALTER TABLE complexity_hist
+                          *
+ERROR at line 1:
+ORA-02210: no options specified for ALTER TABLE
+
+
+alter table complexity_hist modify(COMPLEXITY_VAL number(10,2))
+*
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table altered.
+
+old   2:   FOREIGN KEY (indmap_id) REFERENCES "&1".indmap (id)
+new   2:   FOREIGN KEY (indmap_id) REFERENCES "TSM10".indmap (id)
+
+Table altered.
+
+old   2:   FOREIGN KEY (country_id) REFERENCES "&1".country (id)
+new   2:   FOREIGN KEY (country_id) REFERENCES "TSM10".country (id)
+
+Table altered.
+
+old   2:   FOREIGN KEY (build_code_id) REFERENCES "&1".build_code (id)
+new   2:   FOREIGN KEY (build_code_id) REFERENCES "TSM10".build_code (id)
+
+Table altered.
+
+old   2:   FOREIGN KEY (phase_id) REFERENCES "&1".phase (id)
+new   2:   FOREIGN KEY (phase_id) REFERENCES "TSM10".phase (id)
+
+Table altered.
+
+old   2:   FOREIGN KEY (ta_indmap_id) REFERENCES "&1".indmap (id)
+new   2:   FOREIGN KEY (ta_indmap_id) REFERENCES "TSM10".indmap (id)
+
+Table altered.
+
+old   2:   FOREIGN KEY (indgroup_indmap_id) REFERENCES "&1".indmap (id)
+new   2:   FOREIGN KEY (indgroup_indmap_id) REFERENCES "TSM10".indmap (id)
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+old   2:  FOREIGN KEY (country_id) REFERENCES "&1".country (id)
+new   2:  FOREIGN KEY (country_id) REFERENCES "TSM10".country (id)
+
+Table altered.
+
+old   2:  FOREIGN KEY (phase_id) REFERENCES "&1".phase (id)
+new   2:  FOREIGN KEY (phase_id) REFERENCES "TSM10".phase (id)
+
+Table altered.
+
+old   2:   FOREIGN KEY (indmap_id) REFERENCES "&1".indmap (id)
+new   2:   FOREIGN KEY (indmap_id) REFERENCES "TSM10".indmap (id)
+
+Table altered.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+old   1: Grant select,insert,update,delete on DERIVED_PRICES to "&1"
+new   1: Grant select,insert,update,delete on DERIVED_PRICES to "TSM10"
+Grant select,insert,update,delete on DERIVED_PRICES to "TSM10"
+                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old   1: Grant select,insert,update,delete on TEMP_IP_STUDY_PRICE to "&1"
+new   1: Grant select,insert,update,delete on TEMP_IP_STUDY_PRICE to "TSM10"
+Grant select,insert,update,delete on TEMP_IP_STUDY_PRICE to "TSM10"
+                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old   1: Grant select,insert,update,delete on TEMP_ODC to "&1"
+new   1: Grant select,insert,update,delete on TEMP_ODC to "TSM10"
+Grant select,insert,update,delete on TEMP_ODC to "TSM10"
+                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old   1: Grant select,insert,update,delete on TEMP_OVERHEAD to "&1"
+new   1: Grant select,insert,update,delete on TEMP_OVERHEAD to "TSM10"
+Grant select,insert,update,delete on TEMP_OVERHEAD to "TSM10"
+                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old   1: Grant select,insert,update,delete on TEMP_PROCEDURE to "&1"
+new   1: Grant select,insert,update,delete on TEMP_PROCEDURE to "TSM10"
+Grant select,insert,update,delete on TEMP_PROCEDURE to "TSM10"
+                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old   1: Grant select,insert,update,delete on complexity_hist to "&1"
+new   1: Grant select,insert,update,delete on complexity_hist to "TSM10"
+Grant select,insert,update,delete on complexity_hist to "TSM10"
+                                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old   1: Grant select,insert,update,delete on temp_cpp to "&1"
+new   1: Grant select,insert,update,delete on temp_cpp to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select,insert,update,delete on cpp_cost to "&1"
+new   1: Grant select,insert,update,delete on cpp_cost to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select on PAP_CLINICAL_PROC_COST_SEQ to "&1"
+new   1: Grant select on PAP_CLINICAL_PROC_COST_SEQ to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select on complexity_hist_SEQ to "&1"
+new   1: Grant select on complexity_hist_SEQ to "TSM10"
+
+Grant succeeded.
+
+old   1: Grant select on cpp_cost_SEQ to "&1"
+new   1: Grant select on cpp_cost_SEQ to "TSM10"
+
+Grant succeeded.
+
+old   1: insert into derived_prices select * from "&1".derived_prices
+new   1: insert into derived_prices select * from "TSM10".derived_prices
+insert into derived_prices select * from "TSM10".derived_prices
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Commit complete.
+
+SP2-0734: unknown command beginning "e.abbrevia..." - rest of line ignored.
+SP2-0734: unknown command beginning "b.code ind..." - rest of line ignored.
+SP2-0023: String not found.
+SP2-0042: unknown command "d.code TA," - rest of line ignored.
+SP2-0734: unknown command beginning "h.cpt_code..." - rest of line ignored.
+SP2-0734: unknown command beginning "k.short_de..." - rest of line ignored.
+SP2-0734: unknown command beginning "j.code com..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+  1* select.GRANT_DATE ,
+  1* select.GRANT_DATE ,.PAYMENT,
+  1* select.GRANT_DATE ,.PAYMENT,.PRIMARY_FLG,
+  1* select.GRANT_DATE ,.PAYMENT,.PRIMARY_FLG,.ENTRY_DATE,
+  1* select.GRANT_DATE ,.PAYMENT,.PRIMARY_FLG,.ENTRY_DATE,.PRIMARY_INDICATION_FLG ,
+  1* select.GRANT_DATE ,.PAYMENT,.PRIMARY_FLG,.ENTRY_DATE,.PRIMARY_INDICATION_FLG ,.ACTIVE_FLG,
+  1* select.GRANT_DATE ,.PAYMENT,.PRIMARY_FLG,.ENTRY_DATE,.PRIMARY_INDICATION_FLG ,.ACTIVE_FLG,.PAYMENTS_ID FoxPro_payments_rownum,
+SP2-0734: unknown command beginning "from temp_..." - rest of line ignored.
+SP2-0734: unknown command beginning "country e,..." - rest of line ignored.
+SP2-0734: unknown command beginning "institutio..." - rest of line ignored.
+SP2-0734: unknown command beginning "where a.in..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+  2* .name institution.indgroup_indmap_id=c.id(+) and
+  2* .name institution.indgroup_indmap_id=c.id(+) and.ta_indmap_id=d.id(+) and
+  2* .name institution.indgroup_indmap_id=c.id(+) and.ta_indmap_id=d.id(+) and.country_id=e.id(+) and
+  2* .name institution.indgroup_indmap_id=c.id(+) and.ta_indmap_id=d.id(+) and.country_id=e.id(+) and.mapper_id=g.id(+) and
+SP2-0734: unknown command beginning "g.procedur..." - rest of line ignored.
+  2* .name institution.indgroup_indmap_id=c.id(+) and.ta_indmap_id=d.id(+) and.country_id=e.id(+) and.mapper_id=g.id(+) and.institution_id=i.id(+) and
+  2* .name institution.indgroup_indmap_id=c.id(+) and.ta_indmap_id=d.id(+) and.country_id=e.id(+) and.mapper_id=g.id(+) and.institution_id=i.id(+) and.build_code_id=j.id(+) and
+  2* .name institution.indgroup_indmap_id=c.id(+) and.ta_indmap_id=d.id(+) and.country_id=e.id(+) and.mapper_id=g.id(+) and.institution_id=i.id(+) and.build_code_id=j.id(+) and.phase_id=k.id(+)
+select.GRANT_DATE ,.PAYMENT,.PRIMARY_FLG,.ENTRY_DATE,.PRIMARY_INDICATION_FLG ,.ACTIVE_FLG,.PAYMENTS_ID FoxPro_payments_rownum,
+      *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+from temp_odc a, protocol l, indmap b, indmap c, indmap d,
+     *
+ERROR at line 42:
+ORA-00942: table or view does not exist
+
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+

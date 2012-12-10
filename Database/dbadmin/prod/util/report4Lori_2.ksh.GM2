@@ -1,0 +1,84 @@
+#!/bin/ksh
+#
+#
+# This program is the confidential and proprietary product of 
+# Fast Track Systems, Inc.  Any unauthorized use, reproduction, 
+# or transfer of this program is strictly prohibited.  
+# Copyright (C) 2000 by Fast Track Systems, Inc.  
+# All rights reserved.
+# 
+# $Workfile: c:\tsm\Database\dbadmin\prod\util\report4Lori.ksh$ 
+#
+# $Revision: 1$        $Date: 8/15/2003 2:03:22 PM$
+#
+#
+# Description:  <ADD>
+#
+#############################################################
+
+cd /export/home/oracle
+. /etc/profile
+. ./.profile
+
+###mailinglist="lshields@mdsol.com mmateo@mdsol.com"
+mailinglist="trialplanning@mdsol.com"
+#mailinglist="dmishra@fast-track.com"
+cclist="dmishra@mdsol.com"
+sender="noreply@mdsol.com"
+ 
+export ORACLE_SID=prod
+sqlplus -s tsm10/`get_pwd tsm10` <<EOF 
+
+set feedback off
+set lin 300
+set pages 1000
+
+spool /export/home/oracle/log/SiteBudgets_UnlistedProcs.csv
+
+set heading off
+
+select '"'||'Report run date: '||'","'||To_char(sysdate,'mm/dd/yy hh24:mi')||' PDT'||'"' from dual;
+Select '"Summary Report of Number of site budgets in each client division"' from dual;
+
+select '"client_division","Site Budgets"' from dual;
+
+select '"'||client_division||'","'||budgets||'"' from(
+select c.name||'('||c.client_div_identifier||')' Client_Division,
+count(*) budgets
+from trial_budget a, trial b, client_div c
+where a.trial_id=b.id 
+and b.client_div_id =c.id
+and a.institution_id is not null
+group by c.name||'('||c.client_div_identifier||')');
+
+Select '"Detail Report of unlisted procedures for each Client"' from dual;
+
+select '"client","type","Unlisted Procedure","Description","Low","Medium","High"' from dual;
+
+select '"'||b.name||'('||b.client_identifier||')'||'","'||
+decode(a.type,'CLIN','PROC',a.type)||'","'|| a.name||'","'||
+trim(a.long_desc)||'","'||a.low||'","'||a.mid||'","'||a.high||'"'
+from unlisted_procedure a,client b
+where a.client_id=b.id
+and upper(b.client_identifier) <> 'DUMMY'
+order by b.name||'('||b.client_identifier||')',
+decode(a.type,'CLIN','PROC',a.type);
+
+spool off
+exit;
+EOF
+
+mv /export/home/oracle/log/SiteBudgets_UnlistedProcs.csv /export/home/oracle/log/SiteBudgets_UnlistedProcs_$(date +%m%d%y).csv
+
+sed "s/$/`echo \\\r`/" /export/home/oracle/log/SiteBudgets_UnlistedProcs_$(date +%m%d%y).csv | \
+uuencode SiteBudgets_UnlistedProcs_$(date +%m%d%y).csv | \
+mailx -r $sender -s "Budgets and Unlisted Procedures in production" -c $cclist $mailinglist
+
+#############################################################
+# MODIFICATION HISTORY:
+#
+# $Log: 
+#  1    DevTSM    1.0         8/15/2003 2:03:22 PM Debashish Mishra 
+# $
+# 
+#############################################################

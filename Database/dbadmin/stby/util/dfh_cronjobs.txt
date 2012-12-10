@@ -1,0 +1,75 @@
+rossvr4:oracle:/export/home/oracle/util >df -h
+Filesystem             size   used  avail capacity  Mounted on
+/dev/dsk/c2t0d0s0      6.4G   5.5G   835M    88%    /
+/devices                 0K     0K     0K     0%    /devices
+ctfs                     0K     0K     0K     0%    /system/contract
+proc                     0K     0K     0K     0%    /proc
+mnttab                   0K     0K     0K     0%    /etc/mnttab
+swap                   2.6G   1.6M   2.6G     1%    /etc/svc/volatile
+objfs                    0K     0K     0K     0%    /system/object
+sharefs                  0K     0K     0K     0%    /etc/dfs/sharetab
+/platform/sun4u-us3/lib/libc_psr/libc_psr_hwcap1.so.1
+                       6.4G   5.5G   835M    88%    /platform/sun4u-us3/lib/libc_psr.so.1
+/platform/sun4u-us3/lib/sparcv9/libc_psr/libc_psr_hwcap1.so.1
+                       6.4G   5.5G   835M    88%    /platform/sun4u-us3/lib/sparcv9/libc_psr.so.1
+fd                       0K     0K     0K     0%    /dev/fd
+swap                   2.6G   104K   2.6G     1%    /tmp
+swap                   2.6G    48K   2.6G     1%    /var/run
+/dev/dsk/c3t5d0s0       98G    84G    14G    86%    /r02
+/dev/dsk/c3t5d0s1       98G    77G    20G    80%    /r03
+/dev/dsk/c3t5d0s3       98G   204M    97G     1%    /r04
+/dev/dsk/c3t5d0s4       98G    58G    40G    60%    /r05
+/dev/dsk/c2t2d0s0       37G    27G   9.7G    74%    /u02
+/dev/dsk/c2t2d0s6       30G   8.2G    21G    28%    /u03
+/dev/dsk/c3t5d0s5       98G    45G    53G    46%    /r06
+/dev/dsk/c2t3d0s6       53G    22G    30G    43%    /work
+/dev/dsk/c3t5d0s6      179G   119G    59G    67%    /orabackup
+/dev/dsk/c2t3d0s0       15G   764M    14G     6%    /arch
+/dev/dsk/c2t0d0s6       43G    14G    28G    34%    /u01
+/dev/dsk/c2t0d0s5       13G   1.3G    11G    11%    /export/home0
+/dev/dsk/c2t0d0s7      4.9G   2.1G   2.7G    44%    /export/home
+
+
+rossvr4:oracle:/export/home/oracle/util >crontab -l
+5,20,35,50 1-20 * * * /export/home/oracle/util/recover_stbydb.ksh >> /export/home/oracle/log/recover_stbydb.log 2>&1
+0 21 * * * /export/home/oracle/util/verify_data_files.ksh>/export/home/oracle/log/verify_data_files.ksh.log 2>&1
+09 10 * * * /export/home/oracle/util/licensewarning.ksh>/export/home/oracle/log/licensewarning.log 2>&1
+0 7 * * * /export/home/oracle/util/cleanup_prod.ksh>/export/home/oracle/log/cleanup_prod.log 2>&1
+30 5,11,17,23 * * * /export/home/oracle/util/monitor_stbydb.ksh>/export/home/oracle/log/monitor_stbydb.log 2>&1
+50 6 * * * /export/home/oracle/util/compare_ear_stat.ksh>/export/home/oracle/log/compare_ear_stat.ksh.log 2>&1
+
+00 04 * * * /export/home/oracle/util/export_perf.ksh > /export/home/oracle/log/export_perf.log 2>&1
+
+# * * * * * /export/home/oracle/monitor/oracle_monitor.ksh > /export/home/oracle/monitor/oracle_monitor.log 2>&1
+# * * * * * /export/home/oracle/monitor/system_monitor.ksh > /export/home/oracle/monitor/system_monitor.log 2>&1
+# 7 16 * * * vmstat 5 | tee /export/home/oracle/monitor/vmstat.log >/export/home/oracle/monitor/vmstat2.log
+#DB#* 2-17 * * 0-5 /export/home/oracle/util/prod_db_chk.ksh > /export/home/oracle/log/prod_db_chk.ksh.log
+#59 9 * * * /export/home/oracle/util/stby_sync_status.ksh prod prod 8 > /export/home/oracle/log/stby_sync_status.log 2>&1
+07 10 * * * /export/home/oracle/util/stby_sync_status.ksh prod prod 8 > /export/home/oracle/log/stby_sync_status.log 2>&1
+##MP##00 18 * * * /export/home/oracle/util/export_ltst.ksh > /export/home/oracle/log/export_ltst.log 2>&1
+##MP##2 * * * * /export/home/oracle/util/archival_move.ksh > /export/home/oracle/log/archival_move.log 2>&1
+0,15,30,45 * * * * JAVA_HOME=/u01/app/oracle/product/10.2.0/jdk /u01/app/oracle/product/10.2.0/ccr/bin/emCCR -cron -silent start
+
+
+rossvr4:oracle:/export/home/oracle/util >su -
+Password:
+Sun Microsystems Inc.   SunOS 5.10      Generic January 2005
+You have new mail.
+#
+#
+# crontab -l
+#ident  "@(#)root       1.21    04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+10 3 * * * /usr/sbin/logadm
+15 3 * * 0 /usr/lib/fs/nfs/nfsfind
+30 3 * * * [ -x /usr/lib/gss/gsscred_clean ] && /usr/lib/gss/gsscred_clean
+#10 3 * * * /usr/lib/krb5/kprop_script ___slave_kdcs___
+
+23,53 * * * * /export/home/oracle/util/check_diskspace.ksh > /export/home/oracle/log/check_diskspace.log 2>&1
+0 0 * * * /export/home/oracle/util/sar_monitor.ksh > /dev/null 2>&1
+15 0 * * * /export/home/oracle/util/mv_sar_files.ksh > /dev/null 2>&1
+0 17 * * * /export/home/oracle/util/raidutil_healthck.ksh > export/home/oracle/log/raid_healthck.log 2>&1
+

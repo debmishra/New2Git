@@ -1,0 +1,1 @@
+Update currency set viewable_flg = 1 where id in (select currency_id from country where is_viewable=1 or is_mdsol_viewable=1);

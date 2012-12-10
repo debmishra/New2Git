@@ -1,0 +1,56 @@
+#!/bin/ksh
+#
+#
+# This program is the confidential and proprietary product of 
+# Fast Track Systems, Inc.  Any unauthorized use, reproduction, 
+# or transfer of this program is strictly prohibited.  
+# Copyright (C) 2000 by Fast Track Systems, Inc.  
+# All rights reserved.
+# 
+# $Workfile$ 
+#
+# $Revision$        $Date$
+#
+#
+# Description:  <ADD>
+#
+#############################################################
+
+MAILHOME=/var/log 
+WL_HOME=/opt/bea/wlserver6.1/config/fasttrack
+mailinglist="4152501689@mobile.att.net 6509969574@mobile.att.net 6509960846@mobile.att.net 15103846612@mobile.mycingular.com nparmelee@fast-track.com dmishra@fast-track.com bparagas@fast-track.com bschrader@fast-track.com jng@fast-track.com 17752301593@mobile.att.net"
+
+proc_num1=`head -1 $WL_HOME/wl.pid`
+proc_num=`echo $proc_num1`
+
+chk_wl1=`ps -p $proc_num | grep -v PID | wc -l`
+chk_wl=`echo $chk_wl1`
+
+if [[ $chk_wl -eq 0 ]]
+  then
+    if [[ ! -f $MAILHOME/mailsent ]]
+      then
+
+         touch $MAILHOME/mailsent
+         echo "Unable to find the weblogic process. Restarting it." | mailx -s WebLogic $mailinglist
+
+         mv $WL_HOME/nohup.out $WL_HOME/nohup.out.$(date +%m%d%y%H%M%S)
+         mv $WL_HOME/logs/weblogic.log $WL_HOME/logs/weblogic.log.$(date +%m%d%y%H%M%S)
+#         cd $WL_HOME
+#         nohup ./startWebLogic.sh &
+         /etc/init.d/webLogic61
+    fi
+    exit 1
+fi
+
+if [[ -f $MAILHOME/mailsent ]]
+then
+ rm $MAILHOME/mailsent
+fi
+
+#############################################################
+# MODIFICATION HISTORY:
+#
+# $Log$
+# 
+#############################################################

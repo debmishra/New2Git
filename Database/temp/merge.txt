@@ -1,0 +1,180 @@
+TSPD* tables, 
+
+45master tables
+
+FTUSER
+FTGROUP
+FTUSER_TO_FTGROUP
+CLIENT
+CLIENT_DIV
+CLIENT_DIV_TO_LIC_APP
+PASSWORD_RULE
+CRITERIA
+CRITEIA_SET
+CRITERIA_SET_ITEM
+CUSTOM_SET
+CUSTOM_SET_ITEM
+ICP_INSTANCE
+
+PROJECT_AREA (?)
+PROJECT(?)
+UNLISTED_PROCEDURE
+LOCATION_SET (?)
+VARIABLE_MAPPING (?)
+USER_PREF (?)
+
+ 
+
+FTUSER_LOGIN_HISTORY
+AUDIT_HIST
+
+select * from tsm10.client_div where client_div_identifier='PRD' union all
+select * from tsm10g.client_div where client_div_identifier='JNJ_PROD'
+/
+
+update tsm10.client_div set tspd_build_tag_id=build_tag_id where client_div_identifier='PRD';
+commit;
+
+-- request Nadine to do a TSD data build with build tag id=20;
+
+select * from tsm10.client where id IN (select client_id from tsm10.client_div where client_div_identifier='PRD') union all
+select * from tsm10g.client where id IN (select client_id from tsm10g.client_div where client_div_identifier='JNJ_PROD')
+/
+
+select * from password_rule where client_div_id IN 
+(select id from tsm10.client_div where client_div_identifier='PRD') union all
+select * from password_rule where client_div_id IN 
+(select id from tsm10g.client_div where client_div_identifier='JNJ_PROD')
+/
+
+select a.name from tsm10.ftuser a, tsm10g.ftuser b 
+where a.name not like 'fasttrack%' and 
+substr(a.name,1,instr(a.name,'@')-1)=
+substr(b.name,1,instr(b.name,'@')-1) and
+a.client_div_id in (select id from tsm10.client_div where client_div_identifier='PRD')
+and b.client_div_id in (select id from tsm10g.client_div where client_div_identifier='JNJ_PROD')
+/
+
+-- if found need to be handled differently
+
+
+grant select on ft15g.ftuser to tsm10;
+grant select on ft15g.ftuser_to_ftgroup to tsm10;
+grant select on tsm10g.client_div to tsm10;
+grant select on tsm10g.client_div_to_lic_app to tsm10;
+
+conn tsm10/***@???
+
+declare
+
+cursor c1 is select id,name from tsm10g.ftuser where name not in (
+select b.name from tsm10.ftuser a, tsm10g.ftuser b 
+where substr(a.name,1,instr(a.name,'@')-1)=
+substr(b.name,1,instr(b.name,'@')-1) and
+a.client_div_id in (select id from tsm10.client_div where client_div_identifier='PRD')
+and b.client_div_id in (select id from tsm10g.client_div where client_div_identifier='JNJ_PROD'))
+AND NAME LIKE '%JNJ_PROD';
+
+clientid number(10);
+clientdivid number(10);
+ftuserid number(10);
+
+begin
+
+select id,client_id into clientdivid,clientid from tsm10.client_div 
+where client_div_identifier='PRD';
+
+
+for ix1 in c1 loop
+
+select increment_sequence('ftuser_seq') into ftuserid from dual;
+
+insert into tsm10.ftuser
+select ftuserid,
+substr(name,1,instr(name,'@'))||'PRD',
+PASSWORD,
+SITE_ID,STARTING_SCREEN,LAST_PASSWORD_UPDATE,
+FIRST_NAME,LAST_NAME,LAST_LOGIN_DATE,PRIMARY_TA_ID,ADDRESS_LINE_1,
+ADDRESS_LINE_2,CITY,STATE,POSTAL_CODE,COUNTRY,WORK_PHONE,HOME_PHONE,
+FAX,MOBILE_PHONE,EMAIL,PREFERRED_CONTACT,TITLE,CLIENTID,CLIENTDIVID,
+DISPLAY_NAME,ACTIVE_TRACE_USER,ACTIVE_TSM_USER,CAN_MODEL_FLAG,
+DEF_PLAN_CURRENCY_ID,OLD_PASSWORD,ACTIVE_TSPD_USER,LOCKED,
+FAILED_LOGIN_ATTEMPTS,INPUT_PREF,CREATION_DATE,MESSAGING_OPT,
+MESSAGING_FLG,ALT_PLAN_CURRENCY_ID,ACTIVE_CROCAS_USER,
+DEF_CRO_ODC_SAVE_FLG,DEF_CRO_TYPE  from tsm10g.ftuser
+where id=ix1.id;
+
+   declare
+
+    	cursor c2 is select ftgroup_id from tsm10g.ftuser_to_ftgroup
+	where ftuser_id=ix1.id;
+   begin
+  	for ix2 in c2 loop
+
+	 insert into tsm10.ftuser_to_ftgroup (id, ftuser_id, ftgroup_id)
+	 select increment_sequence('ftuser_to_ftgroup_seq'),ftuserid, ix2.ftgroup_id
+ 	 from dual;
+
+	end loop;
+   end;
+end loop;
+
+end;
+/
+
+
+commit;
+
+
+declare
+
+ principalcontactid_old number(10);
+ clientdivid_old number(10);
+ principalcontactid_new number(10);
+ clientdivid_new number(10);
+
+begin
+
+ select id into clientdivid_new from tsm10.client_div where client_div_identifier='PRD';
+select id into clientdivid_old from tsm10g.client_div where client_div_identifier='JNJ_PROD';
+
+ select principal_contact_id into principalcontactid_old from tsm10g.client_div_to_lic_app 
+ where client_div_id=clientdivid_old and app_name='TSPD';
+
+ select id into principalcontactid_new from tsm10.ftuser where name=(
+ select substr(name,1,instr(name,'@'))||'PRD' from tsm10g.ftuser where id=principalcontactid_old);
+ 
+ insert into tsm10.client_div_to_lic_app(ID,CLIENT_DIV_ID,APP_NAME,
+ LICENSE_EXP_DATE,PRINCIPAL_CONTACT_ID,VERSION,FRONTEND_VERSION,
+ PATCH_AVAILABLE,PATCH_VERSION,ALERT_EMAIL,APP_COMPONENTS)
+ select increment_sequence('client_div_to_lic_app_seq'),clientdivid_new,app_name,
+ LICENSE_EXP_DATE,PRINCIPALCONTACTID_NEW,VERSION,FRONTEND_VERSION,
+ PATCH_AVAILABLE,PATCH_VERSION,ALERT_EMAIL,APP_COMPONENTs 
+ from tsm10g.client_div_to_lic_app 
+ where client_div_id=clientdivid_old and app_name='TSPD';
+
+end;
+/
+commit;
+
+--*************
+--Actions taken
+--*************
+
+update tsm10.client_div set author_model_type='PULL' where client_div_identifier='PRD';
+commit;
+
+delete from tsm10.tspd_unit_of_measure;
+commit;
+insert into tsm10.tspd_unit_of_measure select * from tsm10g.tspd_unit_of_measure;
+commit;
+delete from tsm10.tspd_coding_system;
+commit;
+insert into tsm10.tspd_coding_system select * from tsm10g.tspd_coding_system;
+commit;
+delete from tsm10.tspd_template_email;
+commit;
+insert into tsm10.tspd_template_email select * from tsm10g.tspd_template_email
+where client_div_id is null;
+commit;
+        

@@ -1,0 +1,39 @@
+#!/bin/ksh
+
+. /etc/profile
+cd ~oracle
+. ./.profile
+
+rcp 192.168.13.21:/export/home/oracle/ftdc/*.dat /export/home/oracle/ftdc/
+
+ftdc_dir=/export/home/oracle/ftdc
+ORA_HOME=/oracle/product/9.2.0
+
+
+$ORA_HOME/bin/sqlldr \
+CONTROL=$ftdc_dir/smssvr1_cpu_mem.ctl, LOG=$ftdc_dir/smssvr1_cpu_mem.log, \
+BAD=$ftdc_dir/smssvr1_cpu_mem.bad, \
+USERID=ftdc/welcome@devl 
+
+$ORA_HOME/bin/sqlldr \
+CONTROL=$ftdc_dir/smssvr2_cpu_mem.ctl, LOG=$ftdc_dir/smssvr2_cpu_mem.log, \
+BAD=$ftdc_dir/smssvr2_cpu_mem.bad, \
+USERID=ftdc/welcome@devl
+
+$ORA_HOME/bin/sqlplus -s ftdc/welcome@devl <<EOF
+update smssvr1_cpu_mem_stat set data_duration=60 where data_duration is null;
+update smssvr2_cpu_mem_stat set data_duration=60 where data_duration is null;
+commit;
+exit;
+EOF
+
+$ORA_HOME/bin/sqlldr \
+CONTROL=$ftdc_dir/ftdc_daily_stat.ctl, LOG=$ftdc_dir/ftdc_daily_stat.log, \
+BAD=$ftdc_dir/ftdc_daily_stat.bad, \
+USERID=ftdc/welcome@devl
+
+$ORA_HOME/bin/sqlldr \
+CONTROL=$ftdc_dir/ftdc_concurrent_users.ctl, LOG=$ftdc_dir/ftdc_concurrent_users.log, \
+BAD=$ftdc_dir/ftdc_concurrent_users.bad, \
+USERID=ftdc/welcome@devl
+
