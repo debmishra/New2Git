@@ -1,6 +1,0 @@
-###rman_delete_bkup.rcv
-
-connect target /;
-connect catalog rman/welcome01@rcat;
-
-delete obsolete;

@@ -1,4 +1,0 @@
-select 'select '||''''||table_name||''''||',next_id,max(id)+1 
-from '||table_name||',id_control
-where id_control.table_name='||''''||table_name||''''||'
-group by next_id,'||''''||table_name||''''||' ;' from id_control

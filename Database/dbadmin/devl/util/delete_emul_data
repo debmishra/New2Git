@@ -1,7 +1,0 @@
-sqlplus -s emul/welcome@devl <<EOF
-delete from run_info where run_id=$1;
-delete from run_user where run_id=$1;
-delete from run where id=$1;
-commit;
-exit;
-EOF
